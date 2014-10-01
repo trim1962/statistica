@@ -1,0 +1,250 @@
+\chapter{Fogli di calcolo}
+\label{TabelleExcel}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|N{6mm}|N{10mm}|N{35mm}|N{25mm}| }%|C{6mm}|*5{C{22.6mm}|}@{}}
+			\hline\rowcolor[gray]{.9}
+			&A			&B			&C\tabularnewline		
+			\end{tabular}\\
+		\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{6mm}|M{10mm}|M{35mm}|M{25mm}| @{}}
+			% oppure
+				\hline 1 &Voto  & Freq. A. & Freq.  Rel. \tabularnewline 
+				\hline 2 & 1 & 3 & =B2/\$B\$12 \tabularnewline
+				\hline 3 & 2 & 3 & =B3/\$B\$12 \tabularnewline
+				\hline 4 & 3 &1  & =B4/\$B\$12 \tabularnewline
+				\hline 5 & 4 & 4 & =B5/\$B\$12 \tabularnewline
+				\hline 6 & 5 &  2& =B6/\$B\$12 \tabularnewline
+				\hline 7 & 6 & 2 & =B7/\$B\$12 \tabularnewline
+				\hline 8 & 7 & 2 &  =B8/\$B\$12\tabularnewline
+				\hline 9 & 8 & 1 &  =B9/\$B\$12\tabularnewline
+				\hline 10 & 9 & 2 & =B10/\$B\$12 \tabularnewline
+				\hline 11 & 10 & 0 & =B11/\$B\$12\tabularnewline
+				\hline 12 & Tot. & =SOMMA(B2:B11)   &  \tabularnewline
+				\hline 
+		\end{tabular}
+	\end{tabular}
+	\caption{Frequenza relativa}
+	\label{tab:FrequenzaRelativaExcel}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|N{6mm}|N{10mm}|N{15mm}|N{25mm}| }%|C{6mm}|*5{C{22.6mm}|}@{}}
+			\hline\rowcolor[gray]{.9}
+			&A			&B			&C\tabularnewline		
+		\end{tabular}\\
+		\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{6mm}|M{10mm}|M{15mm}|M{25mm}| @{}}
+			% oppure
+			\hline 1 &Voto  & Freq. A. & Freq.  Cum. \tabularnewline 
+			\hline 2 & 1 & 3 & =B2 \tabularnewline
+			\hline 3 & 2 & 3 & =B3+C2 \tabularnewline
+			\hline 4 & 3 &1  & =B4+C3 \tabularnewline
+			\hline 5 & 4 & 4 & =B5+C4 \tabularnewline
+			\hline 6 & 5 &  2& =B6+C5 \tabularnewline
+			\hline 7 & 6 & 2 & =B7+C6 \tabularnewline
+			\hline 8 & 7 & 2 &  =B8+C7\tabularnewline
+			\hline 9 & 8 & 1 &  =B9+C8\tabularnewline
+			\hline 10 & 9 & 2 & =B10+C9 \tabularnewline
+			\hline 11 & 10 & 0 & =B11+C10\tabularnewline
+			\hline
+		\end{tabular}
+	\end{tabular}
+	\caption{Frequenza Cumulata}
+	\label{tab:FrequenzaCumulataExcel}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|N{6mm}|N{10mm}|N{35mm}|N{25mm}|N{20mm}|N{30mm}| }%|C{6mm}|*5{C{22.6mm}|}@{}}
+			\hline\rowcolor[gray]{.9}
+			&A&B&C&D&E\tabularnewline		
+		\end{tabular}\\
+		\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{6mm}|M{10mm}|M{35mm}|M{25mm}|M{20mm}|M{30mm}| @{}}
+			% oppure
+			\hline 1 &Voto  & Freq. A & Freq. Rel.&Freq. perc.&Freq. Cum \tabularnewline 
+			\hline 2 & 1 & 3 & =B2/\$B\$12&=C2*100&=B2 \tabularnewline
+			\hline 3 & 2 & 3 & =B3/\$B\$12 &=C3*100&=B3+E2\tabularnewline
+			\hline 4 & 3 &1  & =B4/\$B\$12&=C4*100&=B4+E3 \tabularnewline
+			\hline 5 & 4 & 4 & =B5/\$B\$12&=C5*100&=B5+E4 \tabularnewline
+			\hline 6 & 5 &  2& =B6/\$B\$12&=C6*100&=B6+E5 \tabularnewline
+			\hline 7 & 6 & 2 & =B7/\$B\$12&=C7*100&=B7+E6 \tabularnewline
+			\hline 8 & 7 & 2 &  =B8/\$B\$12&=C8*100&=B8+E7\tabularnewline
+			\hline 9 & 8 & 1 &  =B9/\$B\$12&=C9*100&=B9+E8\tabularnewline
+			\hline 10 & 9 & 2 & =B10/\$B\$12 &=C10*100&=B10+E9\tabularnewline
+			\hline 11 & 10 & 0 & =B11/\$B\$12&=C11*100&=B11+E10\tabularnewline
+			\hline 12 & Tot. & =SOMMA(B2:B11) & && \tabularnewline
+			\hline 
+		\end{tabular}
+	\end{tabular}
+	\caption{Frequenze a confronto}
+	\label{tab:FrequenzeaConfrontoExcel}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|N{6mm}|N{18mm}|*2{N{32.6mm}|}N{14.6mm}| }%{|C{6mm}|*5{C{22.6mm}|}@{}}
+			\hline\rowcolor[gray]{.9}
+			&A			&B			&C &D\tabularnewline		
+			\end{tabular}\\
+		\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{6mm}|M{18mm}|*2{M{32.6mm}|}M{14.6mm}| @{}}
+			% oppure
+			\hline
+			1&	$x_i$	&  $n_i$		& $x_i\cdot n_i$	&M\tabularnewline
+			\hline
+			2& 6	& 8	& =A2*B2	&=C6/B6	\tabularnewline
+			\hline
+			3& 3	& 6	& =A3*B3	&	\tabularnewline
+			\hline
+			4&4	& 5	& =A4*B4	&	\tabularnewline
+			\hline
+			5&5	& 3	& =A5*B5	&	\tabularnewline
+			\hline
+			6&Tot.	& =SOMMA(B2:B5)	& =SOMMA(B2:B5)	&	\tabularnewline
+			\hline
+		\end{tabular}
+	\end{tabular}
+	\caption{Media aritmetica ponderata}
+	\label{tab:MediaAritmteicaPonderataExcel}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|N{6mm}|N{10mm}|*2{N{18mm}|}N{10mm}| }%{|C{6mm}|*5{C{22.6mm}|}@{}}
+			\hline\rowcolor[gray]{.9}
+			&A&B&C &D\tabularnewline		
+			\end{tabular}\\
+		\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{6mm}|M{10mm}|*2{M{18mm}|}M{10mm}| @{}}
+			% oppure
+			\hline
+			1&	$x_i$	& $D$& $x_i - D $&D\tabularnewline
+			\hline
+			2& 4& =\$D\$2&=A2-B2 	&3	\tabularnewline
+			\hline
+			3& 5,4	& =\$D\$2	& =A3-B3	&	\tabularnewline
+			\hline
+			4&3	& =\$D\$2	& =A4-B4	&	\tabularnewline
+			\hline
+			5&2	& =\$D\$2	& =A5-B5	&	\tabularnewline
+			\hline
+			6&3,4	& =\$D\$2	& =A6-B6	&	\tabularnewline
+			\hline
+		\end{tabular}
+	\end{tabular}
+	\caption{Scarti semplici}
+	\label{tab:ScartiSempliciExcel}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|N{6mm}|N{10mm}|*2{N{35mm}|}N{12mm}| }%{|C{6mm}|*5{C{22.6mm}|}@{}}
+			\hline\rowcolor[gray]{.9}
+			&A&B&C &D\tabularnewline		
+			\end{tabular}\\
+		\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{6mm}|M{10mm}|*2{M{35mm}|}M{12mm}| @{}}
+			% oppure
+			\hline
+			1&& $x_i$& $\abs{x_i-M }$&M\tabularnewline
+			\hline
+			2& & 3&=ABS(B2-\$D\$2) 	&=B7/5	\tabularnewline
+			\hline
+			3& & 7& =ABS(B2-\$D\$2) 	& S	\tabularnewline
+			\hline
+			4&	& 8	& =ABS(B2-\$D\$2) 	& =C7/5	\tabularnewline
+			\hline
+			5&	& 10	& =ABS(B2-\$D\$2) 	&	\tabularnewline
+			\hline
+			6&	& 2	& =ABS(B2-\$D\$2) 	&	\tabularnewline
+			\hline
+			7&Tot.	& =SOMMA(B2:B6)	& =SOMMA(C2:C6)	&	\tabularnewline
+			\hline
+		\end{tabular}
+	\end{tabular}
+	\caption{Scarto medio assoluto}
+	\label{tab:ScartoMedioAssolutoExcel}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|N{6mm}|N{7mm}|N{7mm}|N{14.6mm}| N{20mm}| N{30mm}|N{8mm}| }%{|C{6mm}|*5{C{22.6mm}|}@{}}
+			\hline\rowcolor[gray]{.9}
+			&A			&B			&C &D&E&F\tabularnewline		
+			
+		\end{tabular}\\
+		\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{6mm}|M{7mm}|M{7mm}|M{14.6mm}| M{20mm}|M{30mm}| M{8mm}|@{}}
+			% oppure
+			\hline
+			1&	$x_i$	&  $n_i$	&D	& $x_i-D$&$d_i=(x_i-D)\cdot n_i$&D\tabularnewline
+			\hline
+			2& 5	& 7	& =\$F\$2&=A2$-$C2&=D2*B2&	8\tabularnewline
+			\hline
+			3& 3	& 6	& =\$F\$2&	=A3$-$C3&=D3*B3&	\tabularnewline
+			\hline
+			4&4	& 5	& =\$F\$2&	=A4$-$C4&=D4*B4&	\tabularnewline
+			\hline
+			5&5	& 3	& =\$F\$2	&=A5$-$C5&=D5*B5&	\tabularnewline
+			\hline
+		\end{tabular}
+	\end{tabular}
+	\caption{Scarti ponderati}
+	\label{tab:ScartiPonderatiExcel}
+\end{table}
+\begin{sidewaystable}
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|N{6mm}|N{10mm}|N{32mm}|N{32mm}| N{32mm}| N{32mm}|N{15mm}|@{} }%{|C{6mm}|*5{C{22.6mm}|}@{}}
+				\hline\rowcolor[gray]{.9}
+			&A			&B			&C &D&E&F\tabularnewline		
+		\end{tabular}\\
+		\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{6mm}|M{10mm}|M{32mm}|M{32mm}| M{32mm}|M{32mm}| M{15mm}|@{}}
+			\hline
+			1&$x_i$& $n_i$&$x_i\cdot n_i $ &$\abs{x_i-M} $ &$\abs{x_i-M}\cdot n_i$&M   \tabularnewline
+			\hline
+			2	& 3 & 3 &=A2*B2  & =ABS(A2$-$\$F\$2) & =D2*B2 & =C7/B7 \tabularnewline
+			\hline
+			3	& 7 & 7 &=A3*B3  & =ABS(A3$-$\$F\$2) & =D3*B3 & S \tabularnewline
+			\hline
+			4	& 30 & 1 &=A4*B4  & =ABS(A4$-$\$F\$2) & =D4*B4 & =E7/B7 \tabularnewline
+			\hline
+			5	&5  & 2 &=A5*B5  & =ABS(A5$-$\$F\$2) & =D5*B5 &  \tabularnewline
+			\hline
+			6	& 4 &9  &=A6*B6  & =ABS(A6$-$\$F\$2) & =D6*B6 &  \tabularnewline
+			\hline
+			7	&Tot.  &=SOMMA(B2:B6)  & =SOMMA(C3:C6) &  & =SOMMA(E2:E6) &  \tabularnewline 
+			\hline
+		\end{tabular}
+	\end{tabular}
+	\caption{Scarto medio assoluto ponderato}
+	\label{tab:ScartiMedioAssolutoPonderatiExcel}
+\end{sidewaystable}
+\begin{table}
+	\centering
+	\begin{tabular}{l}
+		%\setlength{\arrayrulewidth}{2pt}
+		\begin{tabular}{@{}|N{6mm}|N{10mm}|N{35mm}|N{25mm}|N{35mm}|N{15mm}| }%|C{6mm}|*5{C{22.6mm}|}@{}}
+			\hline\rowcolor[gray]{.9}
+			&A&B&C&D&E\tabularnewline		
+		\end{tabular}\\
+		\begin{tabular}{@{}|>{\columncolor[gray]{.9}}M{6mm}|M{10mm}|M{35mm}|M{25mm}|M{35mm}|M{15mm}| @{}}
+			% oppure
+			\hline 1 &  & $x_i$& $x_i-M $&$(x_i-M )^2$&M \tabularnewline 
+			\hline 2 &  & 1 & =B2-\$E\$2&=C2*C2&=B7/5 \tabularnewline
+			\hline 3 &  & 5 & =B3-\$E\$2 &=C3*C3&S\tabularnewline
+			\hline 4 &  &4  & =B4-\$E\$2&=C4*C4&=D7/5\tabularnewline
+			\hline 5 &  & 6 & =B5-\$E\$2&=C5*C5& \tabularnewline
+			\hline 6 &  &  9& =B6-\$E\$2&=C6*C6& \tabularnewline
+			\hline 7 & Tot. & =SOMMA(B2:B6) & &=SOMMA(D2:D6) & \tabularnewline
+			\hline 
+		\end{tabular}
+	\end{tabular}
+	\caption{Calcolo varianza}
+	\label{tab:CalcoloVarianzaExcel}
+\end{table}

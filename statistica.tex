@@ -1,0 +1,129 @@
+\documentclass[a4paper,oneside]{book}%\frenchspacing%
+\input{../Mod_base/base}
+\input{../Mod_base/grafica}
+\input{../Mod_base/matematica}
+\input{../Mod_base/tabelle}
+\newcolumntype{C}[1]{>{\centering}p{#1}}
+\newcolumntype{M}[1]{>{\centering\rule[-3mm]{0pt}{8mm}}m{#1}}
+\newcolumntype{N}[1]{>{\centering\rule[-1mm]{0pt}{4.75mm}}m{#1}}
+\input{../Mod_base/rifIndici}
+\input{../Mod_base/pagina}
+\input{../Mod_base/date}
+\input{../Mod_base/loghi}
+\input{../Mod_base/unita_misura}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\pdfinfo{
+/Author (Claudio Duchi)
+/Title  (Appunti statistica)
+/CreationDate (D:\pdfdate)
+/ModDate (D:\pdfdate)
+/Subject (Statistica)
+/Keywords ()
+}
+
+% % % % % % % % % % % % % % % % % % % %TITOLO % % % % % % % % % % % % % % % % % % % % % % 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% % % % % % % % % % % % % % % % % % % %Appendice % % % % % % % % % % % % % % % % % % % % % % % % % 
+\usepackage{appendix}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{BOZZA}
+% % % % % % % % % % % % % % % % % % % % % % % % % %valore ASSoluto
+\makeatletter
+\newcommand\abs{\@ifstar\lr@abs\n@abs}
+\newcommand\lr@abs[1]{\left|#1\right|}
+\newcommand\n@abs[2][]{\mathopen{#1|}#2\mathclose{#1|}}
+\makeatother
+% % % %uso vaolre assoluto
+%\abs{x} \abs[\big]{x} \abs[\Big]{x}
+%\abs*{\dfrac{a}{b}}
+% % % % % % % % % % % % % % % %bibliografia
+\usepackage[babel]{csquotes}
+\usepackage[backend=biber]{biblatex}
+\bibliography{biblio}
+% % % % % % % % % % % % % % % %
+\listfiles
+\makeindex
+\begin{document}
+\frontmatter
+\begin{titlepage}
+	
+	\begin{center}
+		
+		
+		% Upper part of the page
+		\input{../Deposito_loghi/Lgrande}\\[1cm]    
+		
+		\textsc{\LARGE Claudio Duchi}\\[1.5cm]
+		
+		%\textsc{\Large Final year project}\\[0.5cm]
+		
+		
+		% Title
+		\HRule \\[0.4cm]
+		{ \huge \bfseries Appunti statistica}\\[0.4cm]
+		
+		\HRule \\[1.5cm]
+		
+		% Author and supervisor
+%		\begin{minipage}{0.4\textwidth}
+%		%	\begin{flushleft} \large
+%				\emph{Author:}\\
+%				John \textsc{Smith}
+%		%	\end{flushleft}
+%		\end{minipage}
+%		\begin{minipage}{0.4\textwidth}
+%			\begin{flushright} \large
+%				\emph{Supervisor:} \\
+%				Dr.~Mark \textsc{Brown}
+%			\end{flushright}
+%		\end{minipage}
+		
+		\vfill
+		
+		% Bottom of the page
+		{\large \today $-$\currenttime}
+		
+	\end{center}
+	
+\end{titlepage}
+	\input{../Deposito_loghi/copyright}
+
+	%\renewcommand{\listfigurename}{Indice delle figure} 
+	\addcontentsline{toc}{chapter}{\numberline{}\listfigurename}
+	\addcontentsline{toc}{chapter}{\numberline{}\listtablename}
+	\listoffigures
+	\listoftables
+
+	\tableofcontents
+	\mainmatter
+%	%\setcounter{page}{5}
+%\input{intro.tex}
+	\input{frequenze.tex}
+	\input{medie.tex}
+	\input{ModaMediana}
+\input{TabExcel}
+%	\backmatter
+%	\renewcommand{\appendixname}{Appendice}
+%	
+%	\addcontentsline{toc}{chapter}{\numberline{}\appendixname}
+%\appendix
+%    \renewcommand{\thesection}{A.\arabic{section}}
+%    \input{legge170_10}
+%%    \renewcommand{\thesection}{B.\arabic{section}}
+%%    \include{Appendix2/appendix2}
+%	 %\includepdf[pages={},pagecommand={\thispagestyle{plain}}]{nome.pdf}
+%	 
+ 
+%	\renewcommand{\indexname}{Indice Analitico}
+\input{../Deposito_loghi/MezziUsati}
+\addcontentsline{toc}{chapter}{\numberline{}\refname}
+\nocite{*}
+\printbibliography
+\addcontentsline{toc}{chapter}{\numberline{}\indexname}
+	\printindex
+\end{document}
+
+		
