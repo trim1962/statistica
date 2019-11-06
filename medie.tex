@@ -2,14 +2,14 @@
 \label{cha:MedieScarti}
 \section{Medie}
 Il concetto di media aritmetica dovrebbe essere noto, nel seguito diamo alcune definizioni che dipendono anche da quanto è stato detto nel capitolo precedente.
-\begin{definizione}[Media aritmetica]
+\begin{defn}[Media aritmetica]
 	Se abbiamo un insieme di dati $x_{1},x_{2},x_{3},\cdots,x_{n}$ la media aritmetica\index{Media!aritmetica} $M$ di questi valori  è  la somma dei valori diviso il numero di elementi.\[M=\dfrac{x_{1}+x_{2}+x_{3}+\cdots+x_{n}}{n}=\dfrac{\sum_{i=1}^{n}x_{i}}{n} \]
-\end{definizione}
+\end{defn}
 
-Nel caso di mentre un insieme  di frequenze assolute avremo la definizione:
-\begin{definizione}[Media aritmetica ponderata]
+Nel caso di un insieme  di frequenze assolute avremo la definizione:
+\begin{defn}[Media aritmetica ponderata]
 Se abbiamo una distribuzione di frequenze di n dati e un valore $x_{i}$ compare $n_{i}$ volte,  allora la media aritmetica ponderata\index{Media!aritmetica!ponderata}  $M$ dei valori è: \[M=\dfrac{x_{1}\cdot n_{1}+x_{2}\cdot n_{2}+\cdots+x_{n}\cdot n_{n}}{n_{1}+n_{2}+\cdots+n_{n} }=\dfrac{\sum_{i=1}^{n}x_{i}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}=\dfrac{\sum_{i=1}^{n}x_{i}\cdot n_{i}}{n}\]
-\end{definizione}
+\end{defn}
 Il calcolo della media aritmetica non porta a grossi problemi, supponiamo di avere otto misure di velocità \[x_{i}=\SIlist[list-separator = {;}]{4.2;3.4;2.3;5.4;3.4;3.5;4.3;3.3}{\metre\per\second}\] La media $M$ è \[M=\dfrac{\num{4.2}+\num{3.4}+\num{2.3}+\num{5.4}+\num{3.4}+\num{3.5}+\num{4.3}+\num{3.3}} {8}=\SI{3.725}{\metre\per\second}\]
 
 Per calcolare la media ponderata possiamo seguire il seguente esempio. La tabella riporta dei dati di un esperimento con sotto le frequenze assolute con cui essi compaiono. 
@@ -20,7 +20,7 @@ Per calcolare la media ponderata possiamo seguire il seguente esempio. La tabell
 	{$n_{i}=$}	& 8 &6  & 5 & 3 \\ 
 \end{tabular}
 \end{center}
-Costruiamo ora  la tabella~\vref{tab:MediaAritmteicaPonderata}.
+Costruiamo ora  la~\vref{tab:MediaAritmteicaPonderata}.
 \begin{table}
 	\centering
 	\begin{tabular}{S[table-format=1.0]S[table-format=2.0]S[table-format=3.0]}
@@ -40,13 +40,13 @@ Costruiamo ora  la tabella~\vref{tab:MediaAritmteicaPonderata}.
 \end{table}
 Sommando l'ultima colonna della tabella otteniamo la media aritmetica ponderata segue 
 \[M=\dfrac{\sum_{i=1}^{q}x_{i}\cdot n_{i}}{n}=\dfrac{\num{101}}{\num{22}} \approx\num{4.590} \]
-Il foglio~\vref{tab:MediaAritmteicaPonderataExcel} permette di riprodurre l'esempio.
+La~\vref{tab:MediaAritmteicaPonderataExcel} permette di riprodurre l'esempio.
 \section{Scarti}
 \subsection{Scarti semplici}
-\begin{definizione}[Scarti semplici]
+\begin{defn}[Scarti semplici]
 Dato un insieme di dati  $x_{1},x_{2},\cdots,x_{n}$, diremo scarti semplici\index{Scarto!semplice} da un valore prefissato $D$,  i valori \[d_{i}=x_{i}-D \]
-\end{definizione}
-Il calcolo degli scarti non è complicato. L'esempio seguente mostra come procedere. Se abbiamo cinque dati, $x_{i}=\numlist{4;5.4;3;2;3.4}$, per calcolare gli scarti da $D=3$, impostiamo  la  tabella~\vref{tab:CalcoloScartiSemplici}. Il foglio di calcolo~\vref{tab:ScartiSempliciExcel} permette di calcolare lo scarto. 
+\end{defn}
+Il calcolo degli scarti non è complicato. L'esempio seguente mostra come procedere. Se abbiamo cinque dati, $x_{i}=\numlist{4;5.4;3;2;3.4}$, per calcolare gli scarti da $D=3$, impostiamo  la~\vref{tab:CalcoloScartiSemplici}. La~\vref{tab:ScartiSempliciExcel} permette di calcolare lo scarto. 
 \begin{table}
 	\centering
 	\begin{tabular}{S[table-format=1.1]S[table-format=1.0]S[table-format=1.1]}
@@ -63,9 +63,9 @@ Il calcolo degli scarti non è complicato. L'esempio seguente mostra come proced
 	\caption{Scarti semplici}
 	\label{tab:CalcoloScartiSemplici}
 \end{table}
-\begin{definizione}[Scarti ponderati]
+\begin{defn}[Scarti ponderati]
 Per una distribuzione di frequenze di n dati e un dato $x_{i}$ compare $n_{i}$ volte,  diremo scarti ponderati\index{Scarto!semplice!ponderato} da un valore prefissato $D$,  i valori \[d_{i}=(x_{i}-D)\cdot n_{i} \]
-\end{definizione}
+\end{defn}
 Supponiamo di avere questi dati 
 \begin{center}
 	\begin{tabular}{l*{4} {S[table-format=1.0]}}
@@ -74,7 +74,7 @@ Supponiamo di avere questi dati
 		{$n_{i}=$}	& 7 &2  & 4 & 8 \\ 
 	\end{tabular}
 \end{center}
-Per calcolare gli  scarti dal valore $D=8$  procederemo come mostrato nella tabella~\vref{tab:ScartiPonderati} impostando  in questa maniera~\vref*{tab:ScartiPonderatiExcel} il foglio elettronico.
+Per calcolare gli  scarti dal valore $D=8$  procederemo come mostrato nella~\vref{tab:ScartiPonderati} impostando  in questa maniera la~\vref*{tab:ScartiPonderatiExcel} il foglio elettronico.
 \begin{table}
 	\centering
 	\begin{tabular}{*{4} {S[table-format=1.0]}S[table-format=2.0]}
@@ -91,18 +91,18 @@ Per calcolare gli  scarti dal valore $D=8$  procederemo come mostrato nella tabe
 	\label{tab:ScartiPonderati}
 \end{table}
 
-\begin{definizione}[Scarto assoluto]
+\begin{defn}[Scarto assoluto]
 Dato un insieme di dati  $x_{1},x_{2},x_{3},\cdots,x_{n}$, diremo scarto assoluto\index{Scarto!assoluto} da un valore prefissato $D$,  i valori \[d_{i}= \abs{x_{i}-D }\]
-\end{definizione}
+\end{defn}
 \subsection{Scarti medi}
 Un'altra misura interessante è quanto lo scarto medio dei valori dalla media del campione.
 Per indicare la variabilità di un insieme,  possiamo utilizzare vari indicatori. Un primo indicatore è lo scarto medio assoluto\index{Scarto!medio!assoluto} dalla media
-\begin{definizione}[Scarto medio assoluto]
+\begin{defn}[Scarto medio assoluto]
 Dato un insieme di dati  $x_{1},x_{2},\cdots,x_{n}$ diremo scarto medio assoluto dalla media $M$  il valore \[ S_{M}=\dfrac{\sum_{i=1}^{n}\abs{x_{i}-M}}{n}\]
-\end{definizione}
-Supponiamo di avere i seguenti dati $x_{i}=\numlist{3;7;8;10;2}$. Per calcolare lo $S_{M}$, costruiamo la tabella~\vref{tab:ScartoMedioAssoluto}. La somma dei dati della prima colonna diviso il numero di elementi fornisce la media $M=\dfrac{30}{5}=6$.  
+\end{defn}
+Supponiamo di avere i seguenti dati $x_{i}=\numlist{3;7;8;10;2}$. Per calcolare lo $S_{M}$, costruiamo la~\vref{tab:ScartoMedioAssoluto}. La somma dei dati della prima colonna diviso il numero di elementi fornisce la media $M=\dfrac{30}{5}=6$.  
 
-Il valore ottenuto permette di costruire la seconda colonna. Lo scarto medio assoluto  l'ottengo sommando i valori della colonna diviso il numero di elementi e otteniamo  $S_{M}=\dfrac{14}{5}=\num{2.8}$. Il foglio di calcolo~\vref{tab:ScartoMedioAssolutoExcel} esprime quanto detto.
+Il valore ottenuto permette di costruire la seconda colonna. Lo scarto medio assoluto  l'ottengo sommando i valori della colonna diviso il numero di elementi e otteniamo  $S_{M}=\dfrac{14}{5}=\num{2.8}$. Il foglio di calcolo presente nella~\vref{tab:ScartoMedioAssolutoExcel} esprime quanto detto.
 \begin{table}
 	\centering
 	\begin{tabular}{l*{2} {S[table-format=2.0]}}
@@ -122,9 +122,9 @@ Il valore ottenuto permette di costruire la seconda colonna. Lo scarto medio ass
 	\label{tab:ScartoMedioAssoluto}
 \end{table}
 Per le distribuzioni vale questa definizione:
-\begin{definizione}[Scarto medio assoluto ponderato]
+\begin{defn}[Scarto medio assoluto ponderato]
 	Se abbiamo una distribuzione di frequenze di n dati e un dato $x_{i}$ compare $n_{i}$ volte,  lo scarto medio assoluto~\index{Scarto!medio!assoluto ponderato} è  il valore \[ S_{M}=\dfrac{\sum_{i=1}^{n}\abs{x_{i}-M}\cdot n_{i} }{  \sum_{i=1}^{n} n_{i}}\]
-\end{definizione}
+\end{defn}
 Poniamo di avere la seguente distribuzione di dati:
 \begin{center}
 	\begin{tabular}{l*{2} {S[table-format=1.0]}S[table-format=2.0]*{2} {S[table-format=1.0]}}
@@ -133,11 +133,11 @@ Poniamo di avere la seguente distribuzione di dati:
 		{$n_{i}=$}	& 7 &2  & 4 & 8 & 9\\   
 	\end{tabular}
 \end{center}
-Nell'esempio che segue costruiamo la tabella di calcolo~\vref{tab:ScartoMedioAssolutoPonderato}.  La somma della seconda colonna è il numero degli elementi, dividendo la somma della terza per il numero degli elementi da la media $M=\dfrac{\num{120}}{\num{20}}=\num{6}$. 
+Nell'esempio che segue costruiamo la~\vref{tab:ScartoMedioAssolutoPonderato}.  La somma della seconda colonna è il numero degli elementi, dividendo la somma della terza per il numero degli elementi da la media $M=\dfrac{\num{120}}{\num{20}}=\num{6}$. 
 
 Conoscendo la media otteniamo la colonna quattro, ricordando che, essendo la differenza in valore assoluto, le quantità che ottengo sono sempre positive. Infine ottengo la colonna cinque, la cui somma divisa il numero degli elementi   fa ottenere lo scarto medio assoluto dalla media $S_{M}=\dfrac{\num{58}}{\num{20}}=\num{2.9}$. 
 
-La tabella~\vref{tab:ScartiMedioAssolutoPonderatiExcel} spiega come costruire un piccolo foglio di calcolo per calcolare lo scarto.
+La~\vref{tab:ScartiMedioAssolutoPonderatiExcel} spiega come costruire un piccolo foglio di calcolo per calcolare lo scarto.
 \begin{table}
 	\centering
 	\begin{tabular}{*{2} {S[table-format=2.0]}S[table-format=3.0]*{2} {S[table-format=2.0]}}
@@ -159,12 +159,12 @@ La tabella~\vref{tab:ScartiMedioAssolutoPonderatiExcel} spiega come costruire un
 
 \subsection{Varianza e scarto quadratico medio}
 Un altro tipo di scarto è la varianza.\index{Varianza} Della varianza diamo due definizioni a seconda che i dati sono o non sono ponderati.
-\begin{definizione}[Varianza]
+\begin{defn}[Varianza]
 Se abbiamo un insieme di dati $x_{1},x_{2},x_{3},\cdots,x_{n}$, la varianza  è la media della somma dei quadrati degli scarti dalla media\[\sigma^{2}=\dfrac{\sum_{i=1}^{n}(x_{i}-M)^2}{n}  \] 
-\end{definizione}
+\end{defn}
 Un esempio di calcolo della varianza è il seguente. 
-Se abbiamo i seguenti dati $x_{i}=\numlist{1;5;4;6;9}$ possiamo definire la tabella~\vref{tab:CalcoloVarianza}. La somma degli elementi della prima colonna, diviso il numero dei dati che la compongono ci permette  di determinare la media $M=\dfrac{\num{25}}{\num{5}}=\num{5}$. 
-La media ottenuta serve per  calcolare la seconda colonna. Per ottenere la varianza, sommiamo gli elementi della terza colonna diviso il numero di essi e otteniamo $\sigma^2=\dfrac{34}{5}=\num{6,8}$. Il foglio~\vref{tab:CalcoloVarianzaExcel} illustra l'esempio.
+Se abbiamo i seguenti dati $x_{i}=\numlist{1;5;4;6;9}$ possiamo definire la~\vref{tab:CalcoloVarianza}. La somma degli elementi della prima colonna, diviso il numero dei dati che la compongono ci permette  di determinare la media $M=\dfrac{\num{25}}{\num{5}}=\num{5}$. 
+La media ottenuta serve per  calcolare la seconda colonna. Per ottenere la varianza, sommiamo gli elementi della terza colonna diviso il numero di essi e otteniamo $\sigma^2=\dfrac{34}{5}=\num{6,8}$. La~\vref{tab:CalcoloVarianzaExcel} illustra l'esempio.
 \begin{table}
 	\centering
 	\begin{tabular}{l*{3}{S[table-format=2.0]}}
@@ -183,9 +183,9 @@ La media ottenuta serve per  calcolare la seconda colonna. Per ottenere la varia
 	\caption{Calcolo varianza}
 	\label{tab:CalcoloVarianza}
 \end{table}
-\begin{definizione}[Varianza ponderata]
+\begin{defn}[Varianza ponderata]
 		Se abbiamo una distribuzione di frequenze di n dati e un dato $x_{i}$ compare $n_{i}$ volte, la varianza  è la media della somma dei quadrato degli scarti dalla media\[\sigma^{2}=\dfrac{\sum_{i=1}^{n}(x_{i}-M)^{2}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}\] 
-\end{definizione}
+\end{defn}
 Poniamo di avere la seguente distribuzione di dati
 \begin{center}
 	\begin{tabular}{l*{5} {S[table-format=1.0]}}
@@ -194,7 +194,7 @@ Poniamo di avere la seguente distribuzione di dati
 		{$n_{i}=$}	& 4 &5  & 6 & 2 & 3\\   
 	\end{tabular}
 \end{center}
-Per ottenere la varianza ponderata costruiamo la tabella~\vref{tab:CalcoloVarianzaPonderata}. La somma degli elementi della seconda colonna ci dice quanti sono i dati. Otteniamo la media dividendo la somma degli elementi della terza colonna con il numero dei dati e otteniamo: $M=\dfrac{87}{20}=\num{4.35}$. 
+Per ottenere la varianza ponderata costruiamo la~\vref{tab:CalcoloVarianzaPonderata}. La somma degli elementi della seconda colonna ci dice quanti sono i dati. Otteniamo la media dividendo la somma degli elementi della terza colonna con il numero dei dati e otteniamo: $M=\dfrac{87}{20}=\num{4.35}$. 
 
 Conoscendo la media $M$  compiliamo le rimanenti colonne. La somma dell'ultima colonna divisa per il numero degli elementi ci permette di  calcolare la varianza $\sigma^2=\dfrac{\num{35.45}}{5}=\num{7.09}$.
 \begin{table}
@@ -217,10 +217,10 @@ Conoscendo la media $M$  compiliamo le rimanenti colonne. La somma dell'ultima c
 \end{table}
 
 La varianza,  dal punto di vista dimensionale, è un problema.  Essendo somma di quadrati, ha anche le dimensioni al quadrato. Per mantenere le dimensioni omogenee con i dati  di partenza, si usa lo scarto quadratico medio\index{Scarto!quadratico!medio}. 
-\begin{definizione}[Scarto quadratico medio]
+\begin{defn}[Scarto quadratico medio]
 	Se abbiamo un insieme di dati $x_{1},x_{2},x_{3},\cdots,x_{n}$, lo scarto quadratico medio è  uguale alla radice quadrata della varianza \[\sigma=\sqrt{\sigma^2} \]
 	Avremo che 
 	\begin{align*}
 		\sigma=\sqrt{\dfrac{\sum_{i=1}^{n}(x_{i}-M)^2}{n}}&&\sigma=\sqrt{\dfrac{\sum_{i=1}^{n}(x_{i}-M)^{2}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}}
 	\end{align*}
-\end{definizione}
+\end{defn}

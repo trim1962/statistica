@@ -1,96 +1,154 @@
-\documentclass[a4paper,oneside]{book}%\frenchspacing%
-\input{../Mod_base/base}
-\input{../Mod_base/grafica}
-\input{../Mod_base/matematica}
-\input{../Mod_base/tabelle}
-\newcolumntype{C}[1]{>{\centering}p{#1}}
-\newcolumntype{M}[1]{>{\centering\rule[-3mm]{0pt}{8mm}}m{#1}}
-\newcolumntype{N}[1]{>{\centering\rule[-1mm]{0pt}{4.75mm}}m{#1}}
-\input{../Mod_base/rifIndici}
-\input{../Mod_base/pagina}
-\input{../Mod_base/date}
-\input{../Mod_base/loghi}
-\input{../Mod_base/unita_misura}
+% !TeX root = statistica.tex
+% !BIB TS-program = biber
+% !TeX encoding = UTF-8
+% !TeX spellcheck = it_IT
+
+\documentclass[a4paper,oneside]{book}%
+\usepackage{cmap}
+\usepackage[big]{layaureo}
+\usepackage{copyright}
+\frenchspacing%
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+\usepackage[italian]{babel}
+\usepackage[thmmarks,hyperref]{ntheorem}
+\usepackage{miamatematica}
+
+\usepackage{lmodern} % load vector font
+\usepackage[T1]{fontenc} % font encoding
+\usepackage[utf8]{inputenc} % input encoding
+%\usepackage{noto}
+\usepackage[babel=true]{microtype}
+%\usepackage{geometry}
+\usepackage{textcomp}
+
+%\geometry{top=1.5cm,bottom=1.5cm}
+\usepackage{grafica}
+
+%\input{../Mod_base/grafica}
+%\input{../Mod_base/matematica}
+\usepackage{tabelle}
+%\input{../Mod_base/tabelle}
+
+%\input{../Mod_base/rifIndici}
+\usepackage{imakeidx}
+\makeindex[options=-s ../Mod_base/oldclaudio.sti]
+%\usepackage{adjustbox}
+%\input{../Mod_base/stand_class}
+\usepackage{pagina}
+
+\setlength{\headheight}{13pt}
+\usepackage{indice}
+\usepackage{date}
+\usepackage{unita_misura}
+
+\usepackage{imakeidx}
+\makeindex[options=-s ../Mod_base/oldclaudio.sti]
+
+\usepackage{diagbox}
+\usepackage{unita_misura}
+%\input{../Mod_base/unita_misura}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\pdfinfo{
-/Author (Claudio Duchi)
-/Title  (Appunti statistica)
-/CreationDate (D:\pdfdate)
-/ModDate (D:\pdfdate)
-/Subject (Statistica)
-/Keywords ()
-}
 
 % % % % % % % % % % % % % % % % % % % %TITOLO % % % % % % % % % % % % % % % % % % % % % % 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 % % % % % % % % % % % % % % % % % % % %Appendice % % % % % % % % % % % % % % % % % % % % % % % % % 
-\usepackage{appendix}
+\usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
+% 10/02/2018 :: 20:05:58 :: \usepackage{parskip}
+\usepackage[toc,page]{appendix}
 
-\usepackage{draftwatermark}
-\SetWatermarkText{BOZZA}
+\renewcommand{\appendixtocname}{Appendici}
+
+\renewcommand{\appendixpagename}{Appendici}
+
+
 % % % % % % % % % % % % % % % % % % % % % % % % % %valore ASSoluto
-\makeatletter
-\newcommand\abs{\@ifstar\lr@abs\n@abs}
-\newcommand\lr@abs[1]{\left|#1\right|}
-\newcommand\n@abs[2][]{\mathopen{#1|}#2\mathclose{#1|}}
-\makeatother
+%\makeatletter
+%\newcommand\abs{\@ifstar\lr@abs\n@abs}
+%\newcommand\lr@abs[1]{\left|#1\right|}
+%\newcommand\n@abs[2][]{\mathopen{#1|}#2\mathclose{#1|}}
+%\makeatother
 % % % %uso vaolre assoluto
 %\abs{x} \abs[\big]{x} \abs[\Big]{x}
 %\abs*{\dfrac{a}{b}}
 % % % % % % % % % % % % % % % %bibliografia
-\usepackage[babel]{csquotes}
-\usepackage[backend=biber]{biblatex}
+\usepackage[style=italian]{csquotes}
+\usepackage[%
+style=philosophy-modern,
+annotation=true,
+hyperref,
+backend=biber,
+backref]{biblatex}
 \bibliography{biblio}
 % % % % % % % % % % % % % % % %
+\usepackage[italian]{varioref}
+\usepackage{hyperxmp}
+\usepackage[pdfpagelabels]{hyperref}
+\usepackage[italian,noabbrev]{cleveref}
+
+\date{\datetime}
+\hypersetup{%
+	pdfencoding=auto,
+	urlcolor={blue},
+	pdftitle={STATISTICA},
+	pdfsubject={APPUNTI},
+	pdfstartview={FitH},
+	pdfpagemode={UseOutlines},
+	pdflicenseurl={http://creativecommons.org/licenses/by-nc-nd/3.0/},
+	pdflang={it},
+	pdfmetalang={it},
+	pdfkeywords={Media, Mediana, Moda, Varianza},
+	pdfcopyright={Copyright (C) 2019, Claudio Duchi},
+	pdfcontacturl={http://breviariomatematico.altervista.org},
+	pdfcontactpostcode={06128},
+	pdfcontactphone={},
+	pdfcontactemail={claduc},
+	pdfcontactcountry={Italy},
+	pdfcontactcity={Perugia},
+	pdfcontactaddress={},
+	pdfcaptionwriter={Claudio Duchi},
+	pdfauthortitle={},%
+	pdfauthor={Claudio Duchi},
+	linkcolor={blue},
+	colorlinks=true,
+	citecolor={red},
+	breaklinks,
+	bookmarksopen,
+	verbose,
+	baseurl={http://breviariomatematico.altervista.org}
+}
+\usepackage{CDloghi}
+\usepackage{miobook}
+\input{compilaTexStudio}
 \listfiles
-\makeindex
+
 \begin{document}
 \frontmatter
+		\hypersetup{pageanchor=false}
 \begin{titlepage}
-	
-	\begin{center}
-		
-		
-		% Upper part of the page
-		\input{../Deposito_loghi/Lgrande}\\[1cm]    
-		
-		\textsc{\LARGE Claudio Duchi}\\[1.5cm]
-		
-		%\textsc{\Large Final year project}\\[0.5cm]
-		
-		
-		% Title
+	\begin{center}	
+		\Lgrandedue\\[1cm]    
+		\textsc{\LARGE Claudio Duchi}\\[1.4cm]
 		\HRule \\[0.4cm]
-		{ \huge \bfseries Appunti statistica}\\[0.4cm]
-		
-		\HRule \\[1.5cm]
-		
-		% Author and supervisor
-%		\begin{minipage}{0.4\textwidth}
-%		%	\begin{flushleft} \large
-%				\emph{Author:}\\
-%				John \textsc{Smith}
-%		%	\end{flushleft}
-%		\end{minipage}
-%		\begin{minipage}{0.4\textwidth}
-%			\begin{flushright} \large
-%				\emph{Supervisor:} \\
-%				Dr.~Mark \textsc{Brown}
-%			\end{flushright}
-%		\end{minipage}
-		
+		{ \huge \bfseries STATISTICA}\\[0.4cm]
+		{ \huge \bfseries APPUNTI SPARSI}\\[0.4cm]
+		\HRule \\
 		\vfill
-		
 		% Bottom of the page
-		{\large \today $-$\currenttime}
-		
+		\polylogo[5.5]{6}		
+		{\large $-$\DTMnow$-$}	
 	\end{center}
-	
+	{\centering
+		Release:\gitReln\ (\gitAbbrevHash)\ Autore:\gitAuthorName\ 
+		\gitCommitterDate \\
+	}
 \end{titlepage}
-	\input{../Deposito_loghi/copyright}
-
+\hypersetup{pageanchor=true}
+%	\input{../Deposito_loghi/copyright}
+	\CDcopyright
 	%\renewcommand{\listfigurename}{Indice delle figure} 
 	\addcontentsline{toc}{chapter}{\numberline{}\listfigurename}
 	\addcontentsline{toc}{chapter}{\numberline{}\listtablename}
@@ -99,26 +157,10 @@
 
 	\tableofcontents
 	\mainmatter
+	\input{compilaTexStudioDue}
 %	%\setcounter{page}{5}
 %\input{intro.tex}
-	\input{frequenze.tex}
-	\input{medie.tex}
-	\input{ModaMediana}
-\input{TabExcel}
-%	\backmatter
-%	\renewcommand{\appendixname}{Appendice}
-%	
-%	\addcontentsline{toc}{chapter}{\numberline{}\appendixname}
-%\appendix
-%    \renewcommand{\thesection}{A.\arabic{section}}
-%    \input{legge170_10}
-%%    \renewcommand{\thesection}{B.\arabic{section}}
-%%    \include{Appendix2/appendix2}
-%	 %\includepdf[pages={},pagecommand={\thispagestyle{plain}}]{nome.pdf}
-%	 
- 
-%	\renewcommand{\indexname}{Indice Analitico}
-\input{../Deposito_loghi/MezziUsati}
+%\input{compilaTexStudioDue}	
 \addcontentsline{toc}{chapter}{\numberline{}\refname}
 \nocite{*}
 \printbibliography
