@@ -2,7 +2,6 @@
 % !BIB TS-program = biber
 % !TeX encoding = UTF-8
 % !TeX spellcheck = it_IT
-
 \documentclass[a4paper,oneside]{book}%
 \usepackage{cmap}
 \usepackage[big]{layaureo}
@@ -13,29 +12,71 @@
 \usepackage{amssymb}
 \usepackage[italian]{babel}
 \usepackage[thmmarks,hyperref]{ntheorem}
-\usepackage{miamatematica}
+
+
+%Teorema
+%\theoremstyle{marginbreak}
+%\theoremheaderfont{\normalfont\bfseries}\theorembodyfont{\slshape}
+%\theoremsymbol{\ensuremath{\diamondsuit}}
+%\theoremseparator{:}
+%\newtheorem{thm}{Teorema}[section]
+%%Proprietà
+%\theoremstyle{marginbreak}
+%\theoremheaderfont{\normalfont\bfseries}\theorembodyfont{\slshape}
+%\theoremsymbol{\ensuremath{\diamondsuit}}
+%\theoremseparator{:}
+%\newtheorem{prop}{Proprietà}[section]
+%%lemma
+%\theoremstyle{changebreak}
+%\theoremsymbol{\ensuremath{\heartsuit}}
+%\theoremindent0.5cm
+%\theoremnumbering{greek}
+%\newtheorem{lem}[thm]{Lemma}
+%%corollario
+%\theoremindent0cm
+%\theoremsymbol{\ensuremath{\spadesuit}}
+%\theoremnumbering{arabic}
+%\newtheorem{cor}[thm]{Corollario}
+%%esempio
+%\theoremstyle{change}
+%\theorembodyfont{\upshape}
+%\theoremsymbol{\ensuremath{\ast}}
+%\theoremseparator{}
+%\newtheorem{exmp}{Esempio}[section]
+%%definizione
+%\theoremstyle{plain}
+%\theoremsymbol{\ensuremath{\clubsuit}}
+%\theoremseparator{.}
+%\theoremprework{\hrule\bigskip}
+%\theorempostwork{\hrule\bigskip}
+%\newtheorem{defn}{Definizione}[section]
+%%commento
+%\theoremstyle{plain}
+%\theorembodyfont{\upshape}
+%\theoremsymbol{\ensuremath{\blacklozenge}}
+%\theoremseparator{:}
+%\newtheorem{comm}{Commento}
+%%dimostrazione
+%\theoremheaderfont{\sc}\theorembodyfont{\upshape}
+%\theoremstyle{nonumberplain}
+%\theoremseparator{:}
+%\theoremsymbol{\rule{1ex}{1ex}}
+%\newtheorem{proof}{Dimostrazione}
+
 
 \usepackage{lmodern} % load vector font
 \usepackage[T1]{fontenc} % font encoding
 \usepackage[utf8]{inputenc} % input encoding
-%\usepackage{noto}
 \usepackage[babel=true]{microtype}
-%\usepackage{geometry}
+
 \usepackage{textcomp}
 
-%\geometry{top=1.5cm,bottom=1.5cm}
 \usepackage{grafica}
 
-%\input{../Mod_base/grafica}
-%\input{../Mod_base/matematica}
 \usepackage{tabelle}
-%\input{../Mod_base/tabelle}
-
-%\input{../Mod_base/rifIndici}
-\usepackage{imakeidx}
-\makeindex[options=-s ../Mod_base/oldclaudio.sti]
-%\usepackage{adjustbox}
-%\input{../Mod_base/stand_class}
+%\newcolumntype{C}[1]{>{\centering}p{#1}}
+%\newcolumntype{M}[1]{>{\centering\rule[-3mm]{0pt}{8mm}}m{#1}}
+%\newcolumntype{N}[1]{>{\centering\rule[-1mm]{0pt}{4.75mm}}m{#1}}
 \usepackage{pagina}
 
 \setlength{\headheight}{13pt}
@@ -46,10 +87,6 @@
 \usepackage{imakeidx}
 \makeindex[options=-s ../Mod_base/oldclaudio.sti]
 
-\usepackage{diagbox}
-\usepackage{unita_misura}
-%\input{../Mod_base/unita_misura}
-
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
 % % % % % % % % % % % % % % % % % % % %TITOLO % % % % % % % % % % % % % % % % % % % % % % 
@@ -57,24 +94,21 @@
 
 % % % % % % % % % % % % % % % % % % % %Appendice % % % % % % % % % % % % % % % % % % % % % % % % % 
 \usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
-% 10/02/2018 :: 20:05:58 :: \usepackage{parskip}
 \usepackage[toc,page]{appendix}
-
 \renewcommand{\appendixtocname}{Appendici}
 
 \renewcommand{\appendixpagename}{Appendici}
-
-
 % % % % % % % % % % % % % % % % % % % % % % % % % %valore ASSoluto
-%\makeatletter
-%\newcommand\abs{\@ifstar\lr@abs\n@abs}
-%\newcommand\lr@abs[1]{\left|#1\right|}
-%\newcommand\n@abs[2][]{\mathopen{#1|}#2\mathclose{#1|}}
-%\makeatother
+\makeatletter
+\newcommand\abs{\@ifstar\lr@abs\n@abs}
+\newcommand\lr@abs[1]{\left|#1\right|}
+\newcommand\n@abs[2][]{\mathopen{#1|}#2\mathclose{#1|}}
+\makeatother
 % % % %uso vaolre assoluto
 %\abs{x} \abs[\big]{x} \abs[\Big]{x}
 %\abs*{\dfrac{a}{b}}
 % % % % % % % % % % % % % % % %bibliografia
+
 \usepackage[style=italian]{csquotes}
 \usepackage[%
 style=philosophy-modern,
@@ -88,7 +122,20 @@ backref]{biblatex}
 \usepackage{hyperxmp}
 \usepackage[pdfpagelabels]{hyperref}
 \usepackage[italian,noabbrev]{cleveref}
-
+%\crefname{defn}{definizione}{definizioni}
+%\Crefname{defn}{Definizione}{Definizioni}
+%\crefname{thm}{teorema}{teoremi}
+%\Crefname{thm}{Teorema}{Teoremi}
+%\crefname{cor}{corollario}{corollari}
+%\Crefname{cor}{Corollario}{Corollari}
+%\crefname{equation}{equazione}{equazioni}
+%\Crefname{equation}{Equazione}{Equazioni}
+%\crefname{sistema}{sistema}{sistemi}
+%\Crefname{sistema}{Sistema}{Sistemi}
+%\crefname{lem}{lemma}{lemmi}
+%\Crefname{lem}{Lemma}{Lemmi}
+%\creflabelformat{equation}{#2\textup{#1}#3}
+\usepackage{miobook}
 \date{\datetime}
 \hypersetup{%
 	pdfencoding=auto,
@@ -120,36 +167,33 @@ backref]{biblatex}
 	verbose,
 	baseurl={http://breviariomatematico.altervista.org}
 }
-\usepackage{CDloghi}
-\usepackage{miobook}
 \input{compilaTexStudio}
+\usepackage{CDloghi}
 \listfiles
-
 \begin{document}
 \frontmatter
 		\hypersetup{pageanchor=false}
-\begin{titlepage}
-	\begin{center}	
-		\Lgrandedue\\[1cm]    
-		\textsc{\LARGE Claudio Duchi}\\[1.4cm]
+\begin{titlepage}\parindent=0pt
+	\centering
+	\parbox{0.8\textwidth}{\centering
+		%			\begin{center}
+		\Lgrandedue\\[1cm]
+		\textsc{\LARGE Claudio Duchi}\\[1.5cm]
 		\HRule \\[0.4cm]
 		{ \huge \bfseries STATISTICA}\\[0.4cm]
-		{ \huge \bfseries APPUNTI SPARSI}\\[0.4cm]
-		\HRule \\
+		{ \large \bfseries appunti sparsi}\\[0.4cm]
+		\HRule \\[1.5cm]
 		\vfill
-		% Bottom of the page
-		\polylogo[5.5]{6}		
-		{\large $-$\DTMnow$-$}	
-	\end{center}
-	{\centering
-		Release:\gitReln\ (\gitAbbrevHash)\ Autore:\gitAuthorName\ 
-		\gitCommitterDate \\
+	\polylogo[5.5]{10}	
+		%		\end{center}
+		
+		\makebox[\linewidth]{\centering
+			Release:\gitReln\ (\gitAbbrevHash)\ Autore:\gitAuthorName\ 
+			\gitCommitterDate}
 	}
 \end{titlepage}
 \hypersetup{pageanchor=true}
-%	\input{../Deposito_loghi/copyright}
-	\CDcopyright
-	%\renewcommand{\listfigurename}{Indice delle figure} 
+\CDcopyright
 	\addcontentsline{toc}{chapter}{\numberline{}\listfigurename}
 	\addcontentsline{toc}{chapter}{\numberline{}\listtablename}
 	\listoffigures
@@ -157,15 +201,15 @@ backref]{biblatex}
 
 	\tableofcontents
 	\mainmatter
-	\input{compilaTexStudioDue}
-%	%\setcounter{page}{5}
-%\input{intro.tex}
-%\input{compilaTexStudioDue}	
+\input{compilaTexStudioDue}
 \addcontentsline{toc}{chapter}{\numberline{}\refname}
 \nocite{*}
 \printbibliography
 \addcontentsline{toc}{chapter}{\numberline{}\indexname}
 	\printindex
+	\appendix
+	\chapter{Mezzi usati}
+	\CDMezziUsati
 \end{document}
 
 		
