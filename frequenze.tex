@@ -1,10 +1,15 @@
 \chapter{Frequenze e tabelle}
 \label{cha:frequenzeTabelle}
-\section{Un esempio pratico}
-\label{sec:UnESempioPratico}
-Per parlare di statistica partiamo da un esempio pratico. Supponiamo di avere una classe di venti alunni. La~\vref{tab:alunnovoto1} riporta i risultati di una verifica. L'insieme dei dati costituisce una popolazione\index{Popolazione}. Una popolazione è formata da unità statistiche\index{Unità statistiche}, in questo caso i voti ma potrebbero essere misure, il numero di punti fatti da un giocatore di basket.   
+\section{Frequenze}
+\label{sec:Frequenze}
+\subsection{Un esempio pratico}
+\label{sec:Un esempioPratico}
+Per parlare di statistica partiamo da un esempio pratico. Supponiamo di avere una classe di venti alunni. La~\vref{tab:alunnovoto1} riporta i risultati di una verifica. L'insieme dei dati costituisce una popolazione\index{Popolazione}. Una popolazione è formata da unità statistiche\index{Unità statistiche}, in questo caso sono i voti ma potrebbero essere misure, il numero di punti fatti da un giocatore di basket etc.   
 
-Le informazioni che fornisce questa tabella non vanno oltre il semplice elenco dei risultasti. Non otteniamo un risultato migliore  considerando la~\vref{fig:VotiAlunni} associato alla tabella. In ordinata abbiamo i voti in ascissa i nomi degli alunni. Ma come è andata la prova per la classe? Per dare una prima risposta  definiamo il concetto di frequenza. Si dice che un dato ha una frequenza se  si ripete più volte. 
+Ciò  che  ci dice questa tabella non va oltre il semplice elenco dei risultasti. Non otteniamo un risultato migliore  considerando la~\vref{fig:VotiAlunni} associato alla tabella. In ordinata abbiamo i voti in ascissa i nomi degli alunni. Ma come è andata la prova per la classe? Per dare una prima risposta  definiamo il concetto di frequenza.
+\begin{defn}[Frequenza]
+	Si dice che un dato ha una frequenza\index{Frequenza} se  si ripete più volte.
+\end{defn}
  \begin{table}
 	\centering
 	\begin{tabular}{*{2}{S[table-format=1.0]}S[table-format=2.0] S[table-format=1.0]}
@@ -40,10 +45,9 @@ Le informazioni che fornisce questa tabella non vanno oltre il semplice elenco d
 	\caption{Voti e Alunni}
 	\label{fig:VotiAlunni}
 \end{figure}
-\section{Frequenze}
-\label{sec:frequenze}
+
 \subsection{Frequenze assolute}
-Un primo tipo di frequenze è la frequenza assoluta.
+Un primo tipo di frequenza è quella assoluta.
 \begin{defn}[Frequenza assoluta]
 	La frequenza assoluta\index{Frequenza!assoluta} è il numero di volte in cui un'unità statistica compare in una popolazione.
 \end{defn}Guardando la tabella vediamo che la frequenza assoluta del voto ``cinque'' è due perché  nella~\vref{tab:alunnovoto1} il voto ``cinque'' compare due volte. La~\vref{tab:FrequenzeAssolute} rappresenta le frequenze assolute dei voti della verifica. 
@@ -89,9 +93,9 @@ Leggendo il grafico è evidente che la verifica non è andata molto bene dato ch
 	\label{fig:FrequanzeAssoluteVoti}
 \end{figure}
 \subsection{Frequenza relativa e percentuale}
-Il maggior problema di una frequenza assoluta è che non consente un confronto fra campioni che non hanno lo stesso numero di unità statistiche. Continuando con l'esempio dei voti, se ho un'altra  classe di quindici alunni come faccio a confrontare i risultati ottenuti? Bisogna introdurre un altro tipo di frequenza la frequenza relativa.\index{Frequenza!relativa} 
+Il maggior problema di una frequenza assoluta è che non consente un confronto fra campioni che non hanno lo stesso numero di unità statistiche. Continuando con l'esempio dei voti, se ho un'altra  classe di quindici alunni come faccio a confrontare i risultati ottenuti? Bisogna introdurre un altro tipo di frequenza: la frequenza relativa.\index{Frequenza!relativa} 
 \begin{defn}[Frequenza relativa]
-La frequenza relativa è la singola frequenza assoluta divisa il numero totale delle unità statistiche. 
+La frequenza relativa è la singola frequenza assoluta divisa per il numero totale delle unità statistiche. 
 \end{defn}
 In questo caso, per costruire la~\vref{tab:FrequenzeRelative}, dividiamo ogni frequenza della~\vref{tab:FrequenzeAssolute} per il numero totale dei voti nella classe cioè venti. La~\vref{tab:FrequenzaRelativaExcel} mostra come organizzare i calcoli.  Da  notare come, in questo caso,  la somma delle frequenze relative sia uno. 
 
@@ -180,9 +184,9 @@ La~\vref*{fig:FrequenzeRelative} è un diagramma ``a torta'' che rappresenta le 
 \end{figure}
 Una variante della frequenza relativa è la frequenza percentuale.\index{Frequenza!percentuale}
 \begin{defn}[Frequenza percentuale]
-	Otteniamo  la frequenza percentuale  scrivendo in forma percentuale relativa. 
+	Otteniamo  la frequenza percentuale  scrivendo in forma percentuale la frequenza relativa. 
 \end{defn} 
-La frequenza percentuale del voto ``tre''  è $5\%$. Un altro tipo di frequenza è la  cumulata.
+La frequenza percentuale del voto ``tre''  è $5\%$. 
 \begin{figure}[!ht]
 	\centering
 	\begin{tikzpicture}[scale=0.5]
@@ -198,12 +202,11 @@ La frequenza percentuale del voto ``tre''  è $5\%$. Un altro tipo di frequenza 
 	\label{fig:FrequenzaCumulata}
 \end{figure}
 \subsection{Frequenze cumulate}
+Problema come conoscere il numero dei ragazzi che hanno ottenuto una valutazione inferiore ad un dato valore? Per rispondere a questa domanda dobbiamo introdurre un nuovo concetto, quello di frequenza comulata.
 \begin{defn}[Frequenza cumulata]
-	La frequenza cumulata\index{Frequenza!cumulata} di una data unità è pari alla sua frequenza assoluta più la somma di tutte quelle precedenti.
+	La frequenza cumulata\index{Frequenza!cumulata} di una data unità è pari alla sua frequenza assoluta più la somma di tutte quelle che la  precedono.
 \end{defn}
 La~\vref*{fig:FrequenzaCumulata} mostra l'andamento della frequenza cumulata per il nostro esempio. La~\vref{tab:FrequenzaCumulataExcel} può essere facilmente ottenuta utilizzando l'esempio.
-
-La frequenza cumulata permette di conoscere per esempio, quanti alunni hanno conseguito un punteggio inferiore o uguale ad uno dato valore.
 
 La~\vref{tab:FrequenzeConfronto} riepiloga quanto detto in precedenza confrontando fra loro i vari risultati. Per ottenelre tale formula si può utilizzare un foglio elettronico come quello~\vpageref[foglio]{tab:FrequenzeaConfrontoExcel}
 \begin{table}[!t]
