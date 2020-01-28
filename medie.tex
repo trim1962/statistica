@@ -12,7 +12,7 @@ Se abbiamo una distribuzione di frequenze di n dati e un valore $x_{i}$ compare 
 \end{defn}
 Il calcolo della media aritmetica non porta a grossi problemi, supponiamo di avere otto misure di velocità \[x_{i}=\SIlist[list-separator = {;}]{4.2;3.4;2.3;5.4;3.4;3.5;4.3;3.3}{\metre\per\second}\] La media $M$ è \[M=\dfrac{\num{4.2}+\num{3.4}+\num{2.3}+\num{5.4}+\num{3.4}+\num{3.5}+\num{4.3}+\num{3.3}} {8}=\SI{3.725}{\metre\per\second}\]
 
-Per calcolare la media ponderata possiamo seguire il seguente esempio. La tabella riporta dei dati di un esperimento con sotto le frequenze assolute con cui essi compaiono. 
+Per calcolare la media ponderata possiamo seguire il seguente esempio. La tabella riporta dei dati di un esperimento assieme alle frequenze assolute con cui essi compaiono. 
 \begin{center}
 \begin{tabular}{l*{4} {S[table-format=1.0]}}
 	{$x_{i}=$}	&6  &3  &4  &5  \\
@@ -74,7 +74,7 @@ Supponiamo di avere questi dati
 		{$n_{i}=$}	& 7 &2  & 4 & 8 \\ 
 	\end{tabular}
 \end{center}
-Per calcolare gli  scarti dal valore $D=8$  procederemo come mostrato nella~\vref{tab:ScartiPonderati} impostando  in questa maniera la~\vref*{tab:ScartiPonderatiExcel} il foglio elettronico.
+Per calcolare gli  scarti dal valore $D=8$  procederemo come mostrato nel foglio elettronico mostrato nella~\vref*{tab:ScartiPonderatiExcel} che permette di costruire la~\vref{tab:ScartiPonderati}
 \begin{table}
 	\centering
 	\begin{tabular}{*{4} {S[table-format=1.0]}S[table-format=2.0]}
@@ -95,8 +95,7 @@ Per calcolare gli  scarti dal valore $D=8$  procederemo come mostrato nella~\vre
 Dato un insieme di dati  $x_{1},x_{2},x_{3},\cdots,x_{n}$, diremo scarto assoluto\index{Scarto!assoluto} da un valore prefissato $D$,  i valori \[d_{i}= \abs{x_{i}-D }\]
 \end{defn}
 \subsection{Scarti medi}
-Un'altra misura interessante è quanto lo scarto medio dei valori dalla media del campione.
-Per indicare la variabilità di un insieme,  possiamo utilizzare vari indicatori. Un primo indicatore è lo scarto medio assoluto\index{Scarto!medio!assoluto} dalla media
+Per indicare la variabilità dei valori,  possiamo utilizzare vari indicatori. Un primo indicatore è lo scarto medio assoluto\index{Scarto!medio!assoluto} dalla media
 \begin{defn}[Scarto medio assoluto]
 Dato un insieme di dati  $x_{1},x_{2},\cdots,x_{n}$ diremo scarto medio assoluto dalla media $M$  il valore \[ S_{M}=\dfrac{\sum_{i=1}^{n}\abs{x_{i}-M}}{n}\]
 \end{defn}
@@ -105,17 +104,17 @@ Supponiamo di avere i seguenti dati $x_{i}=\numlist{3;7;8;10;2}$. Per calcolare 
 Il valore ottenuto permette di costruire la seconda colonna. Lo scarto medio assoluto  l'ottengo sommando i valori della colonna diviso il numero di elementi e otteniamo  $S_{M}=\dfrac{14}{5}=\num{2.8}$. Il foglio di calcolo presente nella~\vref{tab:ScartoMedioAssolutoExcel} esprime quanto detto.
 \begin{table}
 	\centering
-	\begin{tabular}{l*{2} {S[table-format=2.0]}}
+	\begin{tabular}{l*{4} {S[table-format=2.0]}}
 		\toprule
-	&{$x_{i}$}	& {$\abs{x_{i}-M} $} \\
+	&{$x_{i}$}&{$M$}&{$x_{i}-M$}	& {$\abs{x_{i}-M} $} \\
 	\midrule 
-		&3&  3\\ 
-		&7&1  \\ 
-		&8& 2 \\ 
-		&10&4  \\ 
-		&2& 4 \\ 
+		&3&6&-3&3\\ 
+		&7&6&1&1  \\ 
+		&8&6&2& 2 \\ 
+		&10&6&4&4  \\ 
+		&2&6&-4& 4 \\ 
 		\midrule
-		{Totali}&30&14  \\
+		{Totali}&30&&&14  \\
 		\bottomrule 
 	\end{tabular} 
 	\caption{Scarto medio assoluto}
@@ -135,7 +134,7 @@ Poniamo di avere la seguente distribuzione di dati:
 \end{center}
 Nell'esempio che segue costruiamo la~\vref{tab:ScartoMedioAssolutoPonderato}.  La somma della seconda colonna è il numero degli elementi, dividendo la somma della terza per il numero degli elementi da la media $M=\dfrac{\num{120}}{\num{20}}=\num{6}$. 
 
-Conoscendo la media otteniamo la colonna quattro, ricordando che, essendo la differenza in valore assoluto, le quantità che ottengo sono sempre positive. Infine ottengo la colonna cinque, la cui somma divisa il numero degli elementi   fa ottenere lo scarto medio assoluto dalla media $S_{M}=\dfrac{\num{58}}{\num{20}}=\num{2.9}$. 
+Conoscendo la media otteniamo la colonna quattro, ricordando che, essendo la differenza in valore assoluto, le quantità che ottengo sono sempre positive. Infine otteniamo la colonna cinque, la cui somma divisa il numero degli elementi è lo scarto medio assoluto dalla media $S_{M}=\dfrac{\num{58}}{\num{20}}=\num{2.9}$. 
 
 La~\vref{tab:ScartiMedioAssolutoPonderatiExcel} spiega come costruire un piccolo foglio di calcolo per calcolare lo scarto.
 \begin{table}
