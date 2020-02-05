@@ -223,3 +223,32 @@ La varianza,  dal punto di vista dimensionale, è un problema.  Essendo somma di
 		\sigma=\sqrt{\dfrac{\sum_{i=1}^{n}(x_{i}-M)^2}{n}}&&\sigma=\sqrt{\dfrac{\sum_{i=1}^{n}(x_{i}-M)^{2}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}}
 	\end{align*}
 \end{defn}
+Concludiamo con un esempio. Poniamo di avere la seguente distribuzione di dati
+\begin{center}
+	\begin{tabular}{l*{5} {S[table-format=1.0]}}
+		{$x_{i}=$}	&4  &0  &2  &5  &6\\
+		\midrule 
+		{$n_{i}=$}	&8 &7  &6 &4 &2\\   
+	\end{tabular}
+\end{center}
+Costruiamo la~\vref{tab:CalcoloScartoQuadratico}. Otteniamo la media  $M=\dfrac{76}{27}\simeq\num{2.81}$.  valore ci permette di completare la tabella. Sommando l'ultima colonna e dividendola per il  numero numer degli elementi otteniamo la varianza $\sigma^2=\dfrac{110.07}{27}\simeq\num{4.23}$
+\[\sigma=\sqrt{4.23}\simeq\num{2.06}\]
+\begin{table}
+	\centering
+	\begin{tabular}{S[table-format=1.0]S[table-format=2.0]S[table-format=2.0]S[table-format=1.2]S[table-format=1.4]S[table-format=2.4] }
+		\toprule
+		{$x_i$}	&{$n_i$}  & {$x_i\cdot n_i$} & {$x_i-M$} & {$(x_i-M )^2$} & {$(x_i-M)^2\cdot n_i $ } \\
+		\midrule 
+		4	& 8 & 32  & 1.19 &1.40  & 11.24 \\ 
+		0	& 7 & 0 & -2.81 &7.92  & 55.46 \\ 
+		2	& 6 & 12 & -0.81 &0.66  & 3.98 \\ 
+		5	& 4 & 20& 2.19&4.78   & 19.10 \\ 
+		6	& 2 & 12 & 3.19 &10.15  &20.29 \\
+		\midrule 
+		{Totali}& 27& 76 &  &  & 110.07 \\
+		\bottomrule 
+	\end{tabular} 
+	\caption{Calcolo scarto quadratico medio}
+	\label{tab:CalcoloScartoQuadratico}
+\end{table}
+Per ottenere l'esempio si può utilizzare la~\vref{tab:CalcoloScartoQuadraticoMedioExcel}
