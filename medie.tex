@@ -182,7 +182,7 @@ La media ottenuta serve per  calcolare la seconda colonna. Per ottenere la varia
 	\caption{Calcolo varianza}
 	\label{tab:CalcoloVarianza}
 \end{table}
-\begin{defn}[Varianza ponderata]
+\begin{defn}[Varianza ponderata]\index{Varianza!ponderata}
 		Se abbiamo una distribuzione di frequenze di n dati e un dato $x_{i}$ compare $n_{i}$ volte, la varianza  è la media della somma dei quadrato degli scarti dalla media\[\sigma^{2}=\dfrac{\sum_{i=1}^{n}(x_{i}-M)^{2}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}\] 
 \end{defn}
 Poniamo di avere la seguente distribuzione di dati
@@ -193,7 +193,7 @@ Poniamo di avere la seguente distribuzione di dati
 		{$n_{i}=$}	& 4 &5  & 6 & 2 & 3\\   
 	\end{tabular}
 \end{center}
-Per ottenere la varianza ponderata costruiamo la~\vref{tab:CalcoloVarianzaPonderata}. La somma degli elementi della seconda colonna ci dice quanti sono i dati. Otteniamo la media dividendo la somma degli elementi della terza colonna con il numero dei dati e otteniamo: $M=\dfrac{87}{20}=\num{4.35}$. 
+Per ottenere la varianza ponderata costruiamo la~\vref{tab:CalcoloVarianzaPonderata}. La somma degli elementi della seconda colonna ci dice quanti sono i dati. Per ottenere la media dividiamo la somma degli elementi della terza colonna con il numero dei dati e otteniamo: $M=\dfrac{87}{20}=\num{4.35}$. 
 
 Conoscendo la media $M$  compiliamo le rimanenti colonne. La somma dell'ultima colonna divisa per il numero degli elementi ci permette di  calcolare la varianza $\sigma^2=\dfrac{\num{35.45}}{5}=\num{7.09}$.
 \begin{table}
@@ -252,6 +252,22 @@ Costruiamo la~\vref{tab:CalcoloScartoQuadratico}. Otteniamo la media  $M=\dfrac{
 	\label{tab:CalcoloScartoQuadratico}
 \end{table}
 Per ottenere l'esempio si può utilizzare la~\vref{tab:CalcoloScartoQuadraticoMedioExcel}
+\begin{table}
+	\centering
+	\begin{tabular}{cS[table-format=1.0]S[table-format=1.0]S[table-format=1.0]}
+		\toprule
+		{$Intervallo$}	  & {$m_i$}&{$n_i$}&{$m_i\cdot n_i$}  \\
+		\midrule 
+		10-20&15	 & 5 &75  \\ 
+		20-30&25	 & 10&250    \\ 
+		30-40&35	 & 12&420    \\
+		\midrule 
+		Totale&	 &27 &745    \\
+		\bottomrule 
+	\end{tabular} 
+	\caption{Media per classi}
+	\label{tab:Mediaperclassi}
+\end{table}
 \section{Un attimo di riflessione}
 La poesia \emph{La statistica}
  di Trilussa ci permette di riflettere sul significato di quanto abbiamo definito e calcolato fino a questo momento.
@@ -307,3 +323,65 @@ Se le due persone mangiano un pollo ciascuno otteniamo la~\vref{tab:PolliTriluss
 	\caption{I polli di Trilussa due}
 	\label{tab:PolliTrilussadue}
 \end{table}
+\section{Medie per classi}
+I dati possono essere raggruppati per classi in questo si dice che la distribuzione è suddivisa per classi di frequenza\index{Frequenza!classi}. In questo caso per calcolare media e varianza occorre  applicare qualche accorgimento. Consideriamo la~\vref{tab:Classifrequenza} per calcolare la media introduciamo il concetto di valore centrale. 
+\begin{defn}[Valore centrale]
+	Se abbiamo un intervallo di frequenza $[a,b]$ definiamo valore centrale dell'intervallo \[m_i=\dfrac{a+b}{2}\]
+\end{defn}\index{Valore!centrale}
+Con questa definizione otteniamo la~\vref{tab:Valorecentrale}
+\begin{table}
+	\centering
+	\begin{tabular}{cS[table-format=1.0] }
+		\toprule
+		{$Intervallo$}	  & {$n_i$}  \\
+		\midrule 
+		10-20	 & 5   \\ 
+		20-30	 & 10    \\ 
+		30-40	 & 12    \\ 
+		\bottomrule 
+	\end{tabular} 
+	\caption{Classi di frequenza}
+	\label{tab:Classifrequenza}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{cS[table-format=1.0]S[table-format=1.0]S[table-format=1.0]S[table-format=2.0]S[table-format=2.0]S[table-format=2.0]S[table-format=2.0]}
+		\toprule
+		{$Intervallo$}	  & {$m_i$}&{$n_i$}&{$m_i\cdot n_i$}&{$m_i-M$}& {$(m_i-M)^2$} &{$(m_i-M)^2n_i$}\\
+		\midrule 
+		10-20&15	 & 5 &75& 12.59&158.5081&792.5405 \\ 
+		20-30&25	 & 10&250 &-2.59&6.7081&67.081   \\ 
+		30-40&35	 & 12&420 &7.41&54.9081&658.8972   \\
+		\midrule 
+		Totale&	 &27 &745 & & &1518.5187  \\
+		\bottomrule 
+	\end{tabular} 
+	\caption{Varianza per classi}
+	\label{tab:Varianzaperclassi}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{cS[table-format=1.0]S[table-format=1.0]}
+		\toprule
+		{$Intervallo$}	  & {$m_i$}&{$n_i$}  \\
+		\midrule 
+		10-20&15	 & 5   \\ 
+		20-30&25	 & 10    \\ 
+		30-40&35	 & 12    \\ 
+		\bottomrule 
+	\end{tabular} 
+	\caption{Valore centrale}
+	\label{tab:Valorecentrale}
+\end{table}
+\begin{defn}[Media aritmetica ponderata per classi]
+	Se abbiamo una distribuzione di $n$ classi di frequenze  e se $m_i$ è il valore centrale di ciascuna classe con frequenza $n_i$,  allora la media aritmetica ponderata\index{Media!aritmetica!ponderata}  $M$ dei valori è: \[M=\dfrac{\sum_{i=1}^{n}m_{i}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}=\dfrac{\sum_{i=1}^{n}m_{i}\cdot n_{i}}{n}\]
+\end{defn}
+Possiamo quindi costruire la~\vref{tab:Mediaperclassi} e ottenere la media\[M=\dfrac{745}{27}\simeq\num{27.59}\]
+
+\begin{defn}[Varianza ponderata per classi]
+		Se abbiamo una distribuzione di $n$ classi di frequenze  e se $m_i$ è il valore centrale di ciascuna classe con frequenza $n_i$
+	la varianza  è la media della somma dei quadrato degli scarti dalla media\[\sigma^{2}=\dfrac{\sum_{i=1}^{n}(m_{i}-M)^{2}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}\] 
+\end{defn}
+Otteniamo la~\vref{tab:Varianzaperclassi} per cui \[\sigma^2=\dfrac{1518.5187}{27}\simeq\num{56.24}\]
+mentre lo scarto quadratico 
+\[\sigma=\sqrt{56.24}\simeq\num{7.50}\]
