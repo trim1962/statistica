@@ -252,3 +252,58 @@ Costruiamo la~\vref{tab:CalcoloScartoQuadratico}. Otteniamo la media  $M=\dfrac{
 	\label{tab:CalcoloScartoQuadratico}
 \end{table}
 Per ottenere l'esempio si può utilizzare la~\vref{tab:CalcoloScartoQuadraticoMedioExcel}
+\section{Un attimo di riflessione}
+La poesia \emph{La statistica}
+ di Trilussa ci permette di riflettere sul significato di quanto abbiamo definito e calcolato fino a questo momento.
+	\begin{verse}
+	Sai ched'è la statistica? È 'na cosa\\
+	che serve pe' fa' un conto in generale\\
+	de la gente che nasce, che sta male,\\
+	che more, che va in carcere e che sposa.\\
+	
+	Ma pe' me la statistica curiosa\\
+	è dove c'entra la percentuale,\\
+	pe' via che, lì, la media è sempre eguale\\
+	puro co' la persona bisognosa.\\
+	
+	Me spiego: da li conti che se fanno\\
+	seconno le statistiche d'adesso\\
+	risurta che te tocca un pollo all'anno:\\
+	
+	e, se nun entra ne le spese tue,\\
+	t'entra ne la statistica lo stesso\\
+	perché c'è un antro che ne magna due.\\
+\end{verse}~\cite{2004tutte}
+
+Dopo qualche spiegazioni fornisce qualche spunto di riflessione riguardo alla media. Abbiamo due persone la prima non mangia nessun pollo la seconda due. La media vale uno, lo scarto è uno come dalla~\vref{tab:PolliTrilussauno}.\par 
+\begin{table}
+	\centering
+	\begin{tabular}{S[table-format=1.0]S[table-format=2.0]S[table-format=1.2] }
+		\toprule
+		{$x_i$}	  & {$x_i-M$} & {$(x_i-M )^2$}  \\
+		\midrule 
+		2	 & 1  & 1   \\ 
+		0	 & -1 & 1   \\ 
+		\midrule 
+		{Totale}& & 2    \\
+		\bottomrule 
+	\end{tabular} 
+	\caption{I polli di Trilussa uno}
+	\label{tab:PolliTrilussauno}
+\end{table}
+Se le due persone mangiano un pollo ciascuno otteniamo la~\vref{tab:PolliTrilussadue}. Anche qui media vale uno ma lo scarto è zero.\par  Morale se Trilussa avesse considerato anche lo scarto il suo sonetto avrebbe un altro significato.
+\begin{table}
+	\centering
+	\begin{tabular}{S[table-format=1.0]S[table-format=2.0]S[table-format=1.2] }
+		\toprule
+		{$x_i$}	  & {$x_i-M$} & {$(x_i-M )^2$}  \\
+		\midrule 
+		1	 & 0  & 0   \\ 
+		1	 & 0 & 0   \\ 
+		\midrule 
+		{Totale}& & 0    \\
+		\bottomrule 
+	\end{tabular} 
+	\caption{I polli di Trilussa due}
+	\label{tab:PolliTrilussadue}
+\end{table}
