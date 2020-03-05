@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{forest}
+\usetikzlibrary{shadows,arrows.meta}
+
+\tikzset{parent/.style={align=center,text width=2.0cm,%fill=green!20,
+		rounded corners=6pt}
+}
+\begin{document}
+\begin{forest}
+for tree={%
+    node options={draw,font=\sffamily},
+   edge={semithick,-Latex},parent,
+       minimum height=1cm,
+}
+[Indice
+    [Posizione
+        [Moda]
+            [Mediana]
+                [Media]
+%            ]
+%        ]
+    ]
+    [Dispersione
+        [Scarto\\ quadratico medio]
+            [Varianza]
+                [Range]
+%            ]
+%        ]
+    ]
+]
+\end{forest}
+\end{document}

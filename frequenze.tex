@@ -1,15 +1,37 @@
 \chapter{Frequenze e tabelle}
 \label{cha:frequenzeTabelle}
+\begin{table}%[!t]
+	\centering
+	\begin{tabular} {*{2} {S[table-format=1.0]}S[table-format=1.2]*{2} {S[table-format=2.0]} }%{SSS[table-format=1.2]
+		%S[table-format=2.0]S}
+		\toprule
+		{Voto}  & {Assoluta} & {Relativa} & {Percentuale} &{Cumulata} \\
+		\midrule 
+		1	& 2 & 0.15 & 15\% & 2  \\ 
+		2	& 3 & 0.15 & 15\% & 5 \\ 
+		3	& 1 & 0.05 & 5\% & 6 \\ 
+		4	& 4 & 0.2 & 20\% & 10 \\ 
+		5	& 2 & 0.1 & 10\% & 12 \\ 
+		6 	& 2 & 0.1 & 10\% & 14 \\ 
+		7	& 2 & 0.1 & 10\% & 16 \\ 
+		8	& 1 & 0.05 & 5\% & 17 \\ 
+		9	& 2 & 0.1 & 10\% & 19 \\ 
+		10	& 0 & 0 & 0\% & 19 \\ 
+		\bottomrule
+	\end{tabular}
+	\caption{Frequenze a confronto}
+	\label{tab:FrequenzeConfronto}
+\end{table}
 \section{Frequenze}
 \label{sec:Frequenze}
 \subsection{Un esempio pratico}
 \label{sec:Un esempioPratico}
 Per parlare di statistica partiamo da un esempio pratico. Supponiamo di avere una classe di venti alunni. La~\vref{tab:alunnovoto1} riporta i risultati di una verifica. L'insieme dei dati costituisce una popolazione\index{Popolazione}. Una popolazione è formata da unità statistiche\index{Unità statistiche}, in questo caso sono i voti ma potrebbero essere misure, il numero di punti fatti da un giocatore di basket etc.   
 
-Ciò  che  ci dice questa tabella non va oltre il semplice elenco dei risultasti. Non otteniamo un risultato migliore  considerando la~\vref{fig:VotiAlunni} associato alla tabella. In ordinata abbiamo i voti in ascissa i nomi degli alunni. Ma come è andata la prova per la classe? Per dare una prima risposta  definiamo il concetto di frequenza.
-\begin{defn}[Frequenza]
-	Si dice che un dato ha una frequenza\index{Frequenza} se  si ripete più volte.
-\end{defn}
+Ciò  che  ci dice questa tabella non va oltre il semplice elenco dei risultasti. Non otteniamo un risultato migliore  considerando la~\vref{fig:VotiAlunni} associata alla tabella. In ordinata abbiamo i voti in ascissa i nomi degli alunni. Ma come è andata la prova per la classe? Per dare una prima risposta  definiamo il concetto di frequenza. 	La frequenza\index{Frequenza} di un dato indica quante volte quel valore di ripete nel campione.
+%\begin{defn}[Frequenza]
+%	La frequenza\index{Frequenza} si un dato indica quante volte quel valore di ripete nel campione.
+%\end{defn}
  \begin{table}
 	\centering
 	\begin{tabular}{*{2}{S[table-format=1.0]}S[table-format=2.0] S[table-format=1.0]}
@@ -45,9 +67,8 @@ Ciò  che  ci dice questa tabella non va oltre il semplice elenco dei risultasti
 	\caption{Voti e Alunni}
 	\label{fig:VotiAlunni}
 \end{figure}
-
 \subsection{Frequenze assolute}
-Un primo tipo di frequenza è quella assoluta.
+%Un primo tipo di frequenza è quella assoluta.
 \begin{defn}[Frequenza assoluta]
 	La frequenza assoluta\index{Frequenza!assoluta} è il numero di volte in cui un'unità statistica compare in una popolazione.
 \end{defn}Guardando la tabella vediamo che la frequenza assoluta del voto ``cinque'' è due perché  nella~\vref{tab:alunnovoto1} il voto ``cinque'' compare due volte. La~\vref{tab:FrequenzeAssolute} rappresenta le frequenze assolute dei voti della verifica. 
@@ -143,8 +164,7 @@ La~\vref*{fig:FrequenzeRelative} è un diagramma ``a torta'' che rappresenta le 
 		\end{tabular}
 		\caption{Frequenze relative}\label{tab:FrequenzeRelative}
 	\end{subtable}
- 
-	\caption{Frequenze}
+ 	\caption{Frequenze}
 	\label{fig:subFrequenze}
 \end{table}
 \begin{figure}
@@ -204,32 +224,13 @@ La frequenza percentuale del voto ``tre''  è $5\%$.
 \subsection{Frequenze cumulate}
 Problema come conoscere il numero dei ragazzi che hanno ottenuto una valutazione inferiore ad un dato valore? Per rispondere a questa domanda introduciamo un nuovo concetto, quello di frequenza cumulata.
 \begin{defn}[Frequenza cumulata]
-	La frequenza cumulata\index{Frequenza!cumulata} di una data unità è pari alla sua frequenza assoluta più la somma di tutte quelle che la  precedono.
+	La frequenza cumulata\index{Frequenza!cumulata!assoluta} di una data unità è pari alla sua frequenza assoluta più la somma di tutte quelle che la  precedono.\[F_{i}=\sum_{i=1}^{i}n_{i}\]
 \end{defn}
 La~\vref*{fig:FrequenzaCumulata} mostra l'andamento della frequenza cumulata per il nostro esempio. La~\vref{tab:FrequenzaCumulataExcel} mostra come ottenere l'esempio.
 
 La~\vref{tab:FrequenzeConfronto} riepiloga quanto detto in precedenza confrontando fra loro i vari risultati. Per ottenere tale tabella si può utilizzare un foglio elettronico come quello~\vpageref[foglio]{tab:FrequenzeaConfrontoExcel}
-\begin{table}[!t]
-	\centering
- 	 \begin{tabular} {*{2} {S[table-format=1.0]}S[table-format=1.2]*{2} {S[table-format=2.0]} }%{SSS[table-format=1.2]
- 	 		%S[table-format=2.0]S}
- 	 	\toprule
- 	 	{Voto}  & {Assoluta} & {Relativa} & {Percentuale} &{Cumulata} \\
- 	 	\midrule 
- 	 	1	& 2 & 0.15 & 15\% & 2  \\ 
- 	 	2	& 3 & 0.15 & 15\% & 5 \\ 
- 	 	3	& 1 & 0.05 & 5\% & 6 \\ 
- 	 	4	& 4 & 0.2 & 20\% & 10 \\ 
- 	 	5	& 2 & 0.1 & 10\% & 12 \\ 
- 	 	6 	& 2 & 0.1 & 10\% & 14 \\ 
- 	 	7	& 2 & 0.1 & 10\% & 16 \\ 
- 	 	8	& 1 & 0.05 & 5\% & 17 \\ 
- 	 	9	& 2 & 0.1 & 10\% & 19 \\ 
- 	 	10	& 0 & 0 & 0\% & 19 \\ 
- 	 	\bottomrule
- 	 \end{tabular}
- 	\caption{Frequenze a confronto}
- 	\label{tab:FrequenzeConfronto}
- \end{table}
+\begin{defn}[Frequenza relativa cumulata]
+	La frequenza cumulata\index{Frequenza!cumulata!relativa} di una data unità è pari alla sua frequenza assoluta più la somma di tutte quelle che la  precedono.\[F_{i}/n=\dfrac{1}{n}\sum_{i=1}^{i}n_{i}\]
+\end{defn}
  
  

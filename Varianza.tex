@@ -1,7 +1,7 @@
 % !TeX root = statistica.tex
-\chapter{Varianza}
+\chapter{Dimostrazioni}
 \begin{thm}[Varianza]\index{Varianza}
-	Se abbiamo una distribuzione di frequenze di n dati e un dato $x_{i}$ compare $n_{i}$ volte, la varianza è: \[\sigma^{2}=\dfrac{\sum_{i=1}^{n}x_{i}^{2}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}-M^2\] 
+	Se abbiamo una distribuzione di frequenze di n dati  $x_{i}$ di frequenza $n_{i}$, la varianza è: \[\sigma^{2}=\dfrac{\sum_{i=1}^{n}x_{i}^{2}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}-M^2\] 
 \end{thm}
 \begin{proof}
 \begin{align*}
@@ -15,4 +15,62 @@
 \end{align*}
 Come si voleva dimostrare
 \end{proof}
-Quindi la varianza è uguale alla media dei quadrati meno il quadrato della media
+Quindi la varianza è uguale alla media dei quadrati meno il quadrato della media.
+Consideriamo un esempio 
+Poniamo di avere la seguente distribuzione di dati
+\begin{center}
+	\begin{tabular}{l*{4} {S[table-format=1.0]}}
+		{$x_{i}=$}	&3  &7  &9  &10   \\
+		\midrule 
+		{$n_{i}=$}	&3 &4  &5 & 2 \\   
+	\end{tabular}
+\end{center}
+Calcoliamo la varianza con il vecchio metodo e otteniamo la~\vref{tab:CalcoloVarianzaPonderataOld} da cui segue che la media è: \[M=\num{7.5}\] mentre la varianza vale:
+\[\sigma^2=\num{6.96}\]
+Con il secondo costruiamo la~\cref{tab:CalcoloVarianzaPonderatanew}. La Tabella ci permette di calcolare la media dei valori e la media dei quadrati. Possiamo scrivere: la media è: \[M=\num{7.5}\] il cui quadrato è \[M^{2}=56.21\] mentre la media dei quadrati è:
+\[M_{q}=\dfrac{885}{14}\backsimeq 63.21\]
+\begin{table}
+	\centering
+	\begin{tabular}{S[table-format=1.0]S[table-format=2.0]S[table-format=2.0]S[table-format=1.2]S[table-format=1.4]S[table-format=2.4] }
+		\toprule
+		{$x_i$}	&{$n_i$}  & {$x_i\cdot n_i$} & {$x_i-M$} & {$(x_i-M )^2$} & {$(x_i-M)^2\cdot n_i $ } \\
+		\midrule 
+		3	& 3 & 9 & -4.5 &20.25  & 60.75 \\ 
+		7	& 4 & 28 & -0.5 &0.25  & 1 \\ 
+		9	& 5 & 50 & 2.5 &6.25  & 31.25 \\ 
+		10	& 2 & 18 & 1.5&2.25  & 4.5 \\ 
+		\midrule 
+		{Totali}& 14& 105 &  &  & 97.5 \\
+		\bottomrule 
+	\end{tabular} 
+	\caption{Calcolo varianza ponderata}
+	\label{tab:CalcoloVarianzaPonderataOld}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{S[table-format=1.0]S[table-format=2.0]S[table-format=2.0]S[table-format=2.0]S[table-format=2.0]}
+		\toprule
+		{$x_i$}	&{$n_i$}  & {$x_i\cdot n_i$} & {$x_{i}^2$} & {$x_{i}^2\cdot n_{i}$} \\
+		\midrule 
+		3	& 3 & 9 & 9&27   \\ 
+		7	& 4 & 28 & 49 &196  \\ 
+		9	& 5 & 50 & 100 &500   \\ 
+		10	& 2 & 18 & 81&162\\ 
+		\midrule 
+		{Totali}& 14& 105 &  & 885 \\
+		\bottomrule 
+	\end{tabular} 
+	\caption{Calcolo varianza ponderata}
+	\label{tab:CalcoloVarianzaPonderatanew}
+\end{table}
+\begin{thm}[Scarto dalla media]\index{Media!scarto}
+Lo scarto dalla media vale zero.\[\sum_{i=1}^{n}(x_{i}-M)=0\] 
+\end{thm}
+\begin{proof}
+	\begin{align*}
+	\sum_{i=1}^{n}(x_{i}-M)=&\\
+	=&\sum_{i=1}^{n}x_{i}-\sum_{i=1}^{n}M\\
+	=&nM-nM=0\\
+	\end{align*}
+	Come volevasi dimostrare
+\end{proof}
