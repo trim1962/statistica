@@ -3,10 +3,10 @@
 \section{Medie}
 Il concetto di media aritmetica dovrebbe essere noto, nel seguito diamo alcune definizioni che dipendono anche da quanto è stato detto nel capitolo precedente.
 \begin{defn}[Media aritmetica]
-	Se abbiamo un insieme di dati $x_{1},x_{2},x_{3},\cdots,x_{n}$ la media aritmetica\index{Media!aritmetica} $M$ di questi valori  è  la somma dei valori diviso il numero di elementi.\[M=\dfrac{x_{1}+x_{2}+x_{3}+\cdots+x_{n}}{n}=\dfrac{\sum_{i=1}^{n}x_{i}}{n} \]
+	Se abbiamo un insieme di dati $\lbrace x_{1},x_{2},x_{3},\cdots,x_{n}\rbrace$ la media aritmetica\index{Media!aritmetica} $M$ di questi valori  è  la somma dei valori diviso il numero di elementi.\[M=\dfrac{x_{1}+x_{2}+x_{3}+\cdots+x_{n}}{n}=\dfrac{\sum_{i=1}^{n}x_{i}}{n} \]
 \end{defn}
 
-Nel caso di mentre un insieme  di frequenze assolute avremo la definizione:
+Nel caso  di frequenze avremo la definizione:
 \begin{defn}[Media aritmetica ponderata]
 Se abbiamo una distribuzione di frequenze di n dati e un valore $x_{i}$ compare $n_{i}$ volte,  allora la media aritmetica ponderata\index{Media!aritmetica!ponderata}  $M$ dei valori è: \[M=\dfrac{x_{1}\cdot n_{1}+x_{2}\cdot n_{2}+\cdots+x_{n}\cdot n_{n}}{n_{1}+n_{2}+\cdots+n_{n} }=\dfrac{\sum_{i=1}^{n}x_{i}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}=\dfrac{\sum_{i=1}^{n}x_{i}\cdot n_{i}}{n}\]
 \end{defn}
@@ -44,7 +44,7 @@ La~\vref{tab:MediaAritmteicaPonderataExcel} permette di riprodurre l'esempio.
 \section{Scarti}
 \subsection{Scarti semplici}
 \begin{defn}[Scarti semplici]
-Dato un insieme di dati  $x_{1},x_{2},\cdots,x_{n}$, diremo scarti semplici\index{Scarto!semplice} da un valore prefissato $D$,  i valori \[d_{i}=x_{i}-D \]
+Dato un insieme di dati  $\lbrace x_{1},x_{2},x_{3},\cdots,x_{n}\rbrace$, diremo scarti semplici\index{Scarto!semplice} da un valore prefissato $D$,  i valori \[d_{i}=x_{i}-D \]
 \end{defn}
 Il calcolo degli scarti non è complicato. L'esempio seguente mostra come procedere. Se abbiamo cinque dati, $x_{i}=\numlist{4;5.4;3;2;3.4}$, per calcolare gli scarti da $D=3$, impostiamo  la~\vref{tab:CalcoloScartiSemplici}. La~\vref{tab:ScartiSempliciExcel} permette di calcolare lo scarto. 
 \begin{table}
@@ -92,12 +92,12 @@ Per calcolare gli  scarti dal valore $D=8$  procederemo come mostrato nel foglio
 \end{table}
 
 \begin{defn}[Scarto assoluto]
-Dato un insieme di dati  $x_{1},x_{2},x_{3},\cdots,x_{n}$, diremo scarto assoluto\index{Scarto!assoluto} da un valore prefissato $D$,  i valori \[d_{i}= \abs{x_{i}-D }\]
+Dato un insieme di dati  $\lbrace x_{1},x_{2},x_{3},\cdots,x_{n}\rbrace$, diremo scarto assoluto\index{Scarto!assoluto} da un valore prefissato $D$,  i valori \[d_{i}= \abs{x_{i}-D }\]
 \end{defn}
 \subsection{Scarti medi}
 Per indicare la variabilità dei valori,  possiamo utilizzare vari indicatori. Un primo indicatore è lo scarto medio assoluto\index{Scarto!medio!assoluto} dalla media
 \begin{defn}[Scarto medio assoluto]
-Dato un insieme di dati  $x_{1},x_{2},\cdots,x_{n}$ diremo scarto medio assoluto dalla media $M$  il valore \[ S_{M}=\dfrac{\sum_{i=1}^{n}\abs{x_{i}-M}}{n}\]
+Dato un insieme di dati  $\lbrace x_{1},x_{2},x_{3},\cdots,x_{n}\rbrace$ diremo scarto medio assoluto dalla media $M$  il valore \[ S_{M}=\dfrac{\sum_{i=1}^{n}\abs{x_{i}-M}}{n}\]
 \end{defn}
 Supponiamo di avere i seguenti dati $x_{i}=\numlist{3;7;8;10;2}$. Per calcolare lo $S_{M}$, costruiamo la~\vref{tab:ScartoMedioAssoluto}. La somma dei dati della prima colonna diviso il numero di elementi fornisce la media $M=\dfrac{30}{5}=6$.  
 
@@ -159,7 +159,7 @@ La~\vref{tab:ScartiMedioAssolutoPonderatiExcel} spiega come costruire un piccolo
 \subsection{Varianza e scarto quadratico medio}
 Un altro tipo di scarto è la varianza.\index{Varianza} Della varianza diamo due definizioni a seconda che i dati sono o non sono ponderati.
 \begin{defn}[Varianza]
-Se abbiamo un insieme di dati $x_{1},x_{2},x_{3},\cdots,x_{n}$, la varianza  è la media della somma dei quadrati degli scarti dalla media\[\sigma^{2}=\dfrac{\sum_{i=1}^{n}(x_{i}-M)^2}{n}  \] 
+Se abbiamo un insieme di dati $\lbrace x_{1},x_{2},x_{3},\cdots,x_{n}\rbrace$, la varianza  è la media della somma dei quadrati degli scarti dalla media\[\sigma^{2}=\dfrac{\sum_{i=1}^{n}(x_{i}-M)^2}{n}  \] 
 \end{defn}
 Un esempio di calcolo della varianza è il seguente. 
 Se abbiamo i seguenti dati $x_{i}=\numlist{1;5;4;6;9}$ possiamo definire la~\vref{tab:CalcoloVarianza}. La somma degli elementi della prima colonna, diviso il numero dei dati che la compongono ci permette  di determinare la media $M=\dfrac{\num{25}}{\num{5}}=\num{5}$. 
@@ -217,7 +217,7 @@ Conoscendo la media $M$  compiliamo le rimanenti colonne. La somma dell'ultima c
 
 La varianza,  dal punto di vista dimensionale, è un problema.  Essendo somma di quadrati, ha anche le dimensioni al quadrato. Per mantenere le dimensioni omogenee con i dati  di partenza, si usa lo scarto quadratico medio\index{Scarto!quadratico!medio}. 
 \begin{defn}[Scarto quadratico medio]
-	Se abbiamo un insieme di dati $x_{1},x_{2},x_{3},\cdots,x_{n}$, lo scarto quadratico medio è  uguale alla radice quadrata della varianza \[\sigma=\sqrt{\sigma^2} \]
+	Se abbiamo un insieme di dati $\lbrace x_{1},x_{2},x_{3},\cdots,x_{n}\rbrace$, lo scarto quadratico medio è  uguale alla radice quadrata della varianza \[\sigma=\sqrt{\sigma^2} \]
 	Avremo che 
 	\begin{align*}
 		\sigma=\sqrt{\dfrac{\sum_{i=1}^{n}(x_{i}-M)^2}{n}}&&\sigma=\sqrt{\dfrac{\sum_{i=1}^{n}(x_{i}-M)^{2}\cdot n_{i}}{\sum_{i=1}^{n} n_{i}}}
