@@ -207,30 +207,35 @@ Una variante della frequenza relativa è la frequenza percentuale.\index{Frequen
 	Otteniamo  la frequenza percentuale  scrivendo in forma percentuale la frequenza relativa. 
 \end{defn} 
 La frequenza percentuale del voto ``tre''  è $5\%$. 
-\begin{figure}[!ht]
+\begin{figure}
 	\centering
-	\begin{tikzpicture}[scale=0.5]
-	\draw[mark=*,thick] plot coordinates{(1,2)(2,2) (2,5) (3,5)(3,6)(4,6) (4,10)(5,10)
-		(5,12)(6,12) (6,14)(7,14) (7,16) (8,16) (8,17)(9,17) (9,19) (10,19)};
-	\draw (1,2) grid (10,20);
-	\foreach \y in {2,3,...,20} \draw(1,\y)node[left]{\y};
-	\foreach \x in {1,2,...,10} \draw(\x,2)node[below]{\x};
-	\draw (5,1) node{Voti};
-	\draw (-1,12) node[rotate=90]{Frequenze cumulata};
-	\end{tikzpicture}
-	\caption{Frequenza Cumulata}
+\includestandalone[width=0.4\linewidth]{grafici/grafcumulata}
+	\caption{Frequenza cumulata}
 	\label{fig:FrequenzaCumulata}
 \end{figure}
+\begin{figure}
+	\centering
+	\includestandalone[width=0.4\linewidth]{grafici/grafretrocumulata}
+	\caption{Frequenza retrocumulata}
+	\label{fig:Frequenzaretrocumulata}
+\end{figure}
 \subsection{Frequenze cumulate}
-Problema come conoscere il numero dei ragazzi che hanno ottenuto una valutazione inferiore ad un dato valore? Per rispondere a questa domanda introduciamo un nuovo concetto, quello di frequenza cumulata.
+Problema come scoprire il numero dei ragazzi che hanno ottenuto una valutazione inferiore ad un dato valore? Per rispondere a questa domanda introduciamo un nuovo concetto, quello di frequenza cumulata.
 \begin{defn}[Frequenza cumulata]
 	La frequenza cumulata\index{Frequenza!cumulata!assoluta} di una data unità è pari alla sua frequenza assoluta più la somma di tutte quelle che la  precedono.\[F_{i}=\sum_{i=1}^{i}n_{i}\]
 \end{defn}
-La~\vref*{fig:FrequenzaCumulata} mostra l'andamento della frequenza cumulata per il nostro esempio. La~\vref{tab:FrequenzaCumulataExcel} mostra come ottenere l'esempio.
+La~\vref{fig:FrequenzaCumulata} mostra l'andamento della frequenza cumulata per il nostro esempio. La~\vref{tab:FrequenzaCumulataExcel} spiega come ottenere l'esempio.
 
 La~\vref{tab:FrequenzeConfronto} riepiloga quanto detto in precedenza confrontando fra loro i vari risultati. Per ottenere tale tabella si può utilizzare un foglio elettronico come quello~\vpageref[foglio]{tab:FrequenzeaConfrontoExcel}
 \begin{defn}[Frequenza relativa cumulata]
-	La frequenza cumulata\index{Frequenza!cumulata!relativa} di una data unità è pari alla sua frequenza assoluta più la somma di tutte quelle che la  precedono.\[F_{i}/n=\dfrac{1}{n}\sum_{i=1}^{i}n_{i}\]
+	La frequenza cumulata\index{Frequenza!cumulata!relativa} di una data unità è pari alla sua frequenza assoluta più la somma di tutte quelle che la  precedono.\[F_{i}/n=\dfrac{\sum_{i=1}^{i}n_{i}}{\sum_{i=1}^{n}n_{i}}=\dfrac{1}{n}\sum_{i=1}^{i}n_{i}\]
 \end{defn}
- 
+Come fare per conoscere quanti alunni hanno almeno la sufficienza. Per rispondere a questa domanda Introduciamo il concetto di frequenza retrocumulata.\par  La~\vref{fig:Frequenzaretrocumulata} mostra l'andamento della frequenza retrocumulata per il nostro esempio. In tutto vi sono sette alunni almeno sufficienti.
+\begin{defn}[Frequenza retrocumulata]
+	La frequenza retrocumulata\index{Frequenza!retrocumulata!assoluta} di una data unità è pari alla sua frequenza assoluta più la somma di tutte quelle che la  precedono.\[F_{i}=\sum_{i=n}^{i}n_{i}\]
+\end{defn}
+
+\begin{defn}[Frequenza relativa retrocumulata]
+	La frequenza cumulata\index{Frequenza!cumulata!relativa} di una data unità è pari alla sua frequenza assoluta più la somma di tutte quelle che la  precedono.\[F_{i}/n=\dfrac{\sum_{i=n}^{i}n_{i}}{\sum_{i=1}^{n}n_{i}}=\dfrac{1}{n}\sum_{i=n}^{i}n_{i}\]
+\end{defn}
  
