@@ -219,6 +219,34 @@ La frequenza percentuale del voto ``tre''  è $5\%$.
 	\caption{Frequenza retrocumulata}
 	\label{fig:Frequenzaretrocumulata}
 \end{figure}
+
+Le frequenze percentuali ci permettono di confrontare situazioni fra loro diverse. Consideriamo per un semplice esempio, la~\cref{tab:Frequnzeconf1} qui abbiamo due  gruppi ($F1$ e $F2$) con tre caratteri diversi, $Bianco$, $Nero$ e $Verde$ che si presentano con frequenze (assolute) diverse.\par Per confrontarle basta costruire la~\cref{tab:Frequnzeconf2} che ci permette di valutare le differenze due gruppi.
+ \begin{table}
+	\centering
+	\begin{tabular}{c*{2}{S[table-format=1.0]}S[table-format=2.0] S[table-format=1.0]}
+		\toprule
+	{Gruppo}	&{Bianco}	& {Nero}&{Verde}	& {Tot.} \\
+		\midrule 
+	F1&7&2&3&12\\
+	F2&40&80&90&210\\
+	\bottomrule
+\end{tabular}
+	\caption{Confronto frequenze}
+	\label{tab:Frequnzeconf1}
+\end{table}
+ \begin{table}
+	\centering
+	\begin{tabular}{c*{3}{S[table-format=2.2]}S[table-format=3.0]}
+		\toprule
+		{Gruppo}	&{Bianco}	& {Nero}&{Verde}	& {Tot.} \\
+		\midrule 
+		F1&58.33&16.67&25.00&100\\
+		F2&19.05&38.10&42.86&100\\
+		\bottomrule
+	\end{tabular}
+	\caption{Confronto frequenze percentuali}
+	\label{tab:Frequnzeconf2}
+\end{table}
 \subsection{Frequenze cumulate}
 Problema come scoprire il numero dei ragazzi che hanno ottenuto una valutazione inferiore ad un dato valore? Per rispondere a questa domanda introduciamo un nuovo concetto, quello di frequenza cumulata.
 \begin{defn}[Frequenza cumulata]
