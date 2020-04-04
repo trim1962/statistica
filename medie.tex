@@ -107,5 +107,90 @@ Le frequenze massime sono due e sono per $n_i=4$ e le mode sono due $M_o=4$ e $M
 \end{defn}
 Per determinare la mediana $M_e$ ordiniamo i dati in modo che $x_1\leq x_2\leq\cdots\leq x_n $. Abbiamo due casi in: i valori sono in numero dispari o i dati sono in in numero pari. Nel primo caso allora la mediana è il valore di posto $k=\dfrac{n-1}{2}+1=\dfrac{n+1}{2}$. 
 
-Praticamente se vi sopo per esempio undici valori e li ordiniamo dal più piccolo al più grande, l'elemento di posto $ \dfrac{11+1}{2}=6$ è l'elemento che cerchiamo. Quel valore ha cinque elementi prima e cinque dopo. Se il numero totale  degli elementi è pari, non vi è un elemento centrale. In questo caso di poniamo  per convenzione che se $k=\dfrac{n}{2}$ $M_e=\dfrac{x_k+x_{k+1}}{2}$
+Se abbiamo un numero dispari di elementi come nella~\vref{tab:datigrezzidispmediana}, costruiamo la~\vref{tab:datiordinatidispmediana} ordinando i dati. La mediana è l'elemento di posto $\dfrac{7+1}{2}=4$. La mediana è il valore $5$ come appare dalla~\vref{tab:datiordinatidispmedianatrovata}.  
+\begin{table}
+\centering
+	\begin{subtable}{0.4\linewidth}
+			\centering
+	\begin{tabular}{S[table-format=1.0]|S[table-format=1.0]}
+		$x$&$n$ \\
+		\midrule 
+		5&1\\
+		3&3\\
+		8&1\\
+		7&2\\  
+	\end{tabular}
+	\caption{Dati grezzi}
+	\label{tab:datigrezzidispmediana}
+	\end{subtable}
+	\begin{subtable}{0.4\linewidth}
+			\centering
+	\begin{tabular}{S[table-format=1.0]|S[table-format=1.0]}
+		$x$&$n$ \\
+		\midrule 
+		3&3\\
+		5&1\\
+		7&2\\
+		8&1\\  
+	\end{tabular}
+	\caption{Dati ordinati}
+	\label{tab:datiordinatidispmediana}
+\end{subtable}\hfill
+		\begin{subtable}{0.4\linewidth}
+		\centering
+		\begin{tabular}{*{3}{S[table-format=1.0]}|S[table-format=1.0]|*{3}{S[table-format=1.0]}}
+		3&3&3&5&7&7&8 \\
+		\midrule 
+		1&2&3&4&5&6&7 \\
+		\midrule 
+		1&2&3&&1&2&3\\   
+	\end{tabular}
+		\caption{Mediana}
+		\label{tab:datiordinatidispmedianatrovata}
+	\end{subtable}
+	\caption{Calcolo mediana n dispari}
+\end{table}
 
+Se abbiamo un numero pari di elementi come nella~\vref{tab:datigrezziparmediana}, costruiamo la~\vref{tab:datiordinatiparmediana} ordinando i dati. La mediana è la media tra gli elemento di posto $\dfrac{8}{2}=4$ cioè $5$ e $7$ elemento di posto $\dfrac{8}{2}+1=5$. Quindi $M_e=\dfrac{5+7}{2}=6$
+\begin{table}
+	\centering
+	\begin{subtable}{0.4\linewidth}
+		\centering
+		\begin{tabular}{S[table-format=1.0]|S[table-format=1.0]}
+			$x$&$n$ \\
+			\midrule 
+		7&3\\
+		5&2\\
+		8&1\\
+		4&2\\  
+		\end{tabular}
+		\caption{Dati grezzi}
+		\label{tab:datigrezziparmediana}
+	\end{subtable}
+	\begin{subtable}{0.4\linewidth}
+		\centering
+		\begin{tabular}{S[table-format=1.0]|S[table-format=1.0]}
+			$x$&$n$ \\
+			\midrule 
+			4&2\\
+			5&2\\
+			7&3\\
+			8&1\\  
+		\end{tabular}
+		\caption{Dati ordinati}
+		\label{tab:datiordinatiparmediana}
+	\end{subtable}\hfill
+	\begin{subtable}{0.4\linewidth}
+		\centering
+		\begin{tabular}{*{4}{S[table-format=1.0]}|*{4}{S[table-format=1.0]}}
+			4&4&5&5&7&7&7&8 \\
+			\midrule 
+			1&2&3&4&5&6&7&8 \\
+			\midrule 
+			1&2&3&4&1&2&3&4\\   
+		\end{tabular}
+		\caption{Mediana}
+		\label{tab:datiordinatiparmedianatrovata}
+	\end{subtable}
+	\caption{Calcolo mediana n pari}
+\end{table}
