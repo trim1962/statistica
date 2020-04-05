@@ -45,7 +45,7 @@
 
 \usepackage{imakeidx}
 \makeindex[options=-s ../Mod_base/oldclaudio.sti]
-
+\indexsetup{level=\chapter,toclevel=chapter}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
@@ -107,10 +107,9 @@ backref]{biblatex}
 	\tableofcontents
 	\mainmatter
 \input{compilaTexStudioDue}
-\addcontentsline{toc}{chapter}{\numberline{}\refname}
 \nocite{*}
-\printbibliography
-\addcontentsline{toc}{chapter}{\numberline{}\indexname}
+\printbibliography[heading=bibnumbered]
+
 \printindex
 \glsaddall	
 \printglossaries	
