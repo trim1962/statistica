@@ -19,8 +19,6 @@
 
 \usepackage{textcomp}
 \usepackage{stand_class}
-%\usepackage{grafica}
-%\usepackage{tkz-euclide}
 \usepackage{tabelle}
 
 \usepackage{pagina}
@@ -29,6 +27,21 @@
 \usepackage{indice}
 \usepackage{date}
 \usepackage{unita_misura}
+\usepackage[acronyms,translate=false,nonumberlist,toc,numberedsection,counter=chapter,automake]{glossaries-extra}
+%\glossariesextrasetup{indexcrossrefs=true}
+\usepackage{glossary-mcols}
+\usepackage{glossary-longragged}
+\usepackage{glossaries-babel}
+\makeglossaries
+\renewcommand*{\glsxtrpostdescgeneral}{%
+	\ifglshasfield{see}{\glscurrententrylabel}
+	{, \glsxtrusesee{\glscurrententrylabel}}%
+	{}%
+}
+
+\setglossarystyle{altlistgroup}
+\loadglsentries{glossario}
+\loadglsentries{acronym}
 
 \usepackage{imakeidx}
 \makeindex[options=-s ../Mod_base/oldclaudio.sti]
@@ -98,7 +111,9 @@ backref]{biblatex}
 \nocite{*}
 \printbibliography
 \addcontentsline{toc}{chapter}{\numberline{}\indexname}
-	\printindex
+\printindex
+\glsaddall	
+\printglossaries	
 	\appendix
 	\include{Varianza}
 	\chapter{Mezzi usati}
